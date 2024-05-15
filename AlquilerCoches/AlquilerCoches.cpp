@@ -2,10 +2,10 @@
 //
 
 #include <iostream>
+using namespace std; 
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main(){
+    cout << "Hello World!\n";
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
