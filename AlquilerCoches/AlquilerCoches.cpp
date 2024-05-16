@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <stdexcept>
+#include <cstdlib>
 #include "Compra.hpp"
 #include "Coche.hpp"
 #include "Cliente.hpp"
@@ -30,6 +31,10 @@ public:
 class ExceptionEscrituraArchivo : public ExceptionError {
 public:
     ExceptionEscrituraArchivo() : ExceptionError("Error al escribir en el archivo") {}
+};
+
+class ExceptionInicioSesion : public ExceptionError {
+    ExceptionInicioSesion() : ExceptionError("Error en el usuario o contrasena impuestos") {}
 };
 
 class Garaje {
@@ -121,3 +126,89 @@ int main() {
     }
     return 0;
 }
+
+/*
+
+class Concesionario {
+private:
+
+    enum Seleccion{COCHE, CLIENTE};
+    vector<Coche*> CochesDisponibles;
+    vector<Cliente*> ClientesRegistrados;
+
+public:
+    vector<Coche*> getCochesDisponibles(){
+        return CochesDisponibles;
+    }
+
+    vector<Cliente*> getClientesDisponibles() {
+        return ClientesRegistrados;
+    }
+
+    //Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
+    void leerCSV(string filename, int seleccion) {
+        ifstream file(filename);
+        if (!file.is_open()) {
+            throw ExceptionLecturaArchivo();
+        }
+
+        cout << "Abriendo archivo: " << filename << endl;
+
+        string line;
+        getline(file, line); // Ignoramos la primera línea del archivo
+        int estado = DISPONIBLE;
+
+        while (getline(file, line)) {
+            stringstream ss(line);
+            string token;
+            vector<string> tokens;
+            // Separar el texto del CSV por comas
+            while (getline(ss, token, ',')) {
+                tokens.push_back(token);
+            }
+
+            if (seleccion == COCHE) {
+                if(tokens[5] == "-1") estado = ALQUILADO;
+                Coche* coche = new Coche(tokens[2], tokens[4], stof(tokens[5]), tokens[7], tokens[8], stoi(tokens[9]), estado);
+                CochesDisponibles.push_back(coche);
+            }
+            else if (seleccion == CLIENTE) {
+                Cliente* cliente = new Cliente(tokens[0], stoi(tokens[1]), tokens[2], tokens[3], {});
+                ClientesRegistrados.push_back(cliente);
+            }
+        }
+
+        file.close();
+        cout << "Los datos se han cargado correctamente.\n";
+    }
+
+
+    Concesionario(vector<Coche*> CochesDisponibles, vector<Cliente*>ClientesRegistrados) : CochesDisponibles(CochesDisponibles), ClientesRegistrados(ClientesRegistrados) {}
+};
+
+++++++++++++++++++++++++++++++++
+
+
+int main()      //INLCUIR CLEAR LLAMANDO A SYSTEM()
+{
+    Concesionario concesionario({}, {});
+    Administrador admin("12344464D", 628893224, "proyectosprogramacion3@gmail.com", {});
+
+    try {
+        concesionario.leerCSV("Coches_2ndaMano.csv", 0);
+        concesionario.leerCSV("", 1);
+        admin.iniciaSesion(concesionario,"012883D", "jddd");
+
+
+    }
+
+    catch (exception& e) {
+        cout << e.what();
+    }
+    return 0;
+
+
+}
+
+
+*/

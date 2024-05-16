@@ -35,7 +35,10 @@ Cliente Administrador::buscaCliente(string Correo) {
     }
     cout << "No se ha encontrado al cliente buscado \n";
 }
-void Administrador::cargaClientes(string filename) { // Excepcion de lectura, Completar
-    ifstream archivo(filename);
 
+bool Administrador::iniciaSesion(Concesionario concesionario, string DNI, string Contrasena) {
+    for (Cliente* i : concesionario.getClientesDisponibles()) {
+        if (i->getDNI() == DNI && i->getContrasena() == Contrasena) return true;
+    }
+    return false;                           // ¡¡¡CAMBIAR A: --> throw ExceptionInicioSesion();  !!!
 }

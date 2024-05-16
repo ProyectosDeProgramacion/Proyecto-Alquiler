@@ -3,11 +3,19 @@
 #include <string>
 #include <fstream>
 
-Cliente::Cliente(string DNI, int Telefono, string Correo, vector<Coche*> Carrito) :
-    DNI(DNI), Telefono(Telefono), Correo(Correo), Carrito(Carrito) {}
+Cliente::Cliente(string DNI, int Telefono, string Correo, string Contrasena, vector<Coche*> Carrito) :
+    DNI(DNI), Telefono(Telefono), Correo(Correo), Contrasena(Contrasena), Carrito(Carrito) {}
+
+string Cliente::getDNI() {
+    return this->DNI;
+}
 
 string Cliente::getCorreo() {
     return this->Correo;
+}
+
+string Cliente::getContrasena() {
+    return this->Contrasena;
 }
 
 int Cliente::getTelefono() {
@@ -52,6 +60,7 @@ void Cliente::muestraClientes(string filename) { // Excepcion de lectura
     while (getline(archivo, line)) {
         cout << line << endl;
     }
+    archivo.close(); 
 }
 
 /*
