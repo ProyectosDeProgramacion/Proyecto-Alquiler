@@ -1,4 +1,5 @@
 // AlquilerCoches.cpp : Realizado por: Ignacio Bravo y Yago López.
+// Hola
 
 #include <iostream>
 #include <fstream>
