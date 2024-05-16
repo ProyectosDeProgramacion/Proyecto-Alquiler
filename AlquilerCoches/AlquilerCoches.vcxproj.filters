@@ -35,13 +35,13 @@
     <ClInclude Include="Administrador.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\OneDrive - RICHMOND MANAGEMENT, S.L\VisualStudio\Proyectos De Programación\Poyecto Alquiler de Coches\Poyecto Alquiler de Coches\Coche.hpp">
+    <ClInclude Include="Cliente.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\OneDrive - RICHMOND MANAGEMENT, S.L\VisualStudio\Proyectos De Programación\Poyecto Alquiler de Coches\Poyecto Alquiler de Coches\Compra.hpp">
+    <ClInclude Include="Coche.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\OneDrive - RICHMOND MANAGEMENT, S.L\VisualStudio\Proyectos De Programación\Poyecto Alquiler de Coches\Poyecto Alquiler de Coches\Cliente.hpp">
+    <ClInclude Include="Compra.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

@@ -134,10 +134,10 @@
     <ClCompile Include="Compra.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\OneDrive - RICHMOND MANAGEMENT, S.L\VisualStudio\Proyectos De Programación\Poyecto Alquiler de Coches\Poyecto Alquiler de Coches\Cliente.hpp" />
-    <ClInclude Include="..\..\..\..\OneDrive - RICHMOND MANAGEMENT, S.L\VisualStudio\Proyectos De Programación\Poyecto Alquiler de Coches\Poyecto Alquiler de Coches\Coche.hpp" />
-    <ClInclude Include="..\..\..\..\OneDrive - RICHMOND MANAGEMENT, S.L\VisualStudio\Proyectos De Programación\Poyecto Alquiler de Coches\Poyecto Alquiler de Coches\Compra.hpp" />
     <ClInclude Include="Administrador.hpp" />
+    <ClInclude Include="Cliente.hpp" />
+    <ClInclude Include="Coche.hpp" />
+    <ClInclude Include="Compra.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
