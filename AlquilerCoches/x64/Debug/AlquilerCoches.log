@@ -1,0 +1,9 @@
+﻿  Administrador.cpp
+  AlquilerCoches.cpp
+C:\Users\Yago López\Source\Repos\Proyecto-Alquiler\AlquilerCoches\AlquilerCoches.cpp(106,11): warning C4930: 'Coche c(void)': no se ha llamado a la función prototipo (¿se pensó una definición de variable?)
+  Cliente.cpp
+  Coche.cpp
+  Compra.cpp
+  Generando código...
+C:\Users\Yago López\Source\Repos\Proyecto-Alquiler\AlquilerCoches\Administrador.cpp(37): warning C4715: 'Administrador::buscaCliente': no todas las rutas de acceso de control devuelven un valor
+  AlquilerCoches.vcxproj -> C:\Users\Yago López\Source\Repos\Proyecto-Alquiler\AlquilerCoches\x64\Debug\AlquilerCoches.exe
