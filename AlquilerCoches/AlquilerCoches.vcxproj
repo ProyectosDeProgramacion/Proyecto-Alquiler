@@ -132,6 +132,7 @@
     <ClCompile Include="Cliente.cpp" />
     <ClCompile Include="Coche.cpp" />
     <ClCompile Include="Compra.cpp" />
+    <ClCompile Include="Concesionario.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Administrador.hpp" />

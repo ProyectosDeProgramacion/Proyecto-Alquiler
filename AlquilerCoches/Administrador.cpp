@@ -1,4 +1,7 @@
+// (.cpp) ADMINISTRADOR
+
 #include "Administrador.hpp"
+#include "Concesionario.hpp"
 #include <fstream>
 
 Administrador::Administrador(string DNI, int Telefono, string Correo, vector<Cliente*> listaClientes) :
@@ -29,16 +32,20 @@ void Administrador::muestraClientes() {
     }
 }
 
+/*
 Cliente Administrador::buscaCliente(string Correo) {
     for (Cliente* c : listaClientes) {
         if (c->getCorreo() == Correo) return (*c);
     }
     cout << "No se ha encontrado al cliente buscado \n";
 }
+*/
 
+/*
 bool Administrador::iniciaSesion(Concesionario concesionario, string DNI, string Contrasena) {
     for (Cliente* i : concesionario.getClientesDisponibles()) {
         if (i->getDNI() == DNI && i->getContrasena() == Contrasena) return true;
     }
-    return false;                           // ¡¡¡CAMBIAR A: --> throw ExceptionInicioSesion();  !!!
+    return false;                           // ¡¡¡CAMBIAR A: --> throw ExceptionInicioSesion(); !!!
 }
+*/

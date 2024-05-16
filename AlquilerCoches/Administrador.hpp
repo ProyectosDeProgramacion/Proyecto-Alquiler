@@ -1,6 +1,9 @@
-#include "Cliente.hpp"
+// (.hpp) ADMINISTRADOR
+
 #include <iostream>
 #include <string>
+#include "Cliente.hpp"
+#include "Concesionario.hpp"
 using namespace std;
 
 #ifndef ADMINISTRADOR_HPP
@@ -24,8 +27,8 @@ public:
     string getCorreo();
     // int getnClientes();
     void muestraClientes();
-    Cliente buscaCliente(string Correo);
-    bool iniciaSesion(Concesionario concesionario, string DNI, string Contrasena);
+    // Cliente buscaCliente(string Correo); REVISAR!!
+    // bool iniciaSesion(Concesionario concesionario, string DNI, string Contrasena);
 };
 
 #endif

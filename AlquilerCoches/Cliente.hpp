@@ -1,7 +1,9 @@
-#include "Coche.hpp"
+// (.hpp) CLIENTE
+
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Coche.hpp"
 using namespace std;
 
 #ifndef CLIENTE_HPP
@@ -21,7 +23,6 @@ public:
     Cliente(string DNI, int Telefono, string Correo, vector<Coche*> Carrito) :
         DNI(DNI), Telefono(Telefono), Correo(Correo), Carrito(Carrito) {}
     */
-
     string getDNI();
     string getCorreo();
     string getContrasena();

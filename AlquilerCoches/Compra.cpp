@@ -1,3 +1,5 @@
+// (.cpp) COMPRA
+
 #include "Compra.hpp"
 
 Compra::Compra(string Coche, string Matricula, int FechaInicio, int FechaFin, string DNICliente) :

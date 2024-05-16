@@ -1,3 +1,5 @@
+// (.hpp) COMPRA
+
 #include <iostream>
 #include <string>
 using namespace std;

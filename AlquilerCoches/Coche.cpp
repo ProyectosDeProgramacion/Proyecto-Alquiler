@@ -1,5 +1,6 @@
-#include "Coche.hpp"
+// (.cpp) COCHE
 
+#include "Coche.hpp"
 // #include <string>
 
 Coche::Coche(string Marca, string Modelo, float Precio, string TipoCombustible, string anoFabricacion, int Kilometros, int Estado) :
@@ -55,4 +56,3 @@ void getListaCoches() {
 
 // Coche(string Marca, string Matricula, string Modelo, float Precio, string TipoCombustible, Fecha anoFabricacion, string Fiabilidad, int Kilometros, int Estado, list<Coche> Coches) : 
 // Marca(Marca), Matricula(Matricula), Modelo(Modelo), Precio(Precio), TipoCombustible(TipoCombustible), anoFabricacion(anoFabricacion), Fiabilidad(Fiabilidad), Kilometros(Kilometros), Estado(Estado) {}
-

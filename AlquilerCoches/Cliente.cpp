@@ -1,6 +1,7 @@
+// (.cpp) CLIENTE
+
 #include "Cliente.hpp"
 #include "Coche.hpp"
-#include <string>
 #include <fstream>
 
 Cliente::Cliente(string DNI, int Telefono, string Correo, string Contrasena, vector<Coche*> Carrito) :
