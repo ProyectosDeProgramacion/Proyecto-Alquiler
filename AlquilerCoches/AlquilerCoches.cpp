@@ -59,7 +59,7 @@ int cuentaLineas() {
 }
 */
 
-//Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
+// Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
 vector<Coche*> leerCSV(string filename) {
     vector<Coche*> coches(100);
     ifstream file(filename);
@@ -188,7 +188,6 @@ public:
 
 ++++++++++++++++++++++++++++++++
 
-
 int main()      //INLCUIR CLEAR LLAMANDO A SYSTEM()
 {
     Concesionario concesionario({}, {});
@@ -209,6 +208,5 @@ int main()      //INLCUIR CLEAR LLAMANDO A SYSTEM()
 
 
 }
-
 
 */
