@@ -24,5 +24,25 @@
     <ClCompile Include="Cliente.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Compra.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Administrador.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Administrador.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\OneDrive - RICHMOND MANAGEMENT, S.L\VisualStudio\Proyectos De Programación\Poyecto Alquiler de Coches\Poyecto Alquiler de Coches\Coche.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\OneDrive - RICHMOND MANAGEMENT, S.L\VisualStudio\Proyectos De Programación\Poyecto Alquiler de Coches\Poyecto Alquiler de Coches\Compra.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\OneDrive - RICHMOND MANAGEMENT, S.L\VisualStudio\Proyectos De Programación\Poyecto Alquiler de Coches\Poyecto Alquiler de Coches\Cliente.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
