@@ -39,7 +39,7 @@ void Cliente::guardaDatos(string filename) { // Excepción de escritura
     cin >> this->Telefono;
     if (!archivo.is_open()) {
         // throw ExceptionEscrituraArchivo();
-        archivo << endl << "DNI: {DNI}, Correo: {Correo}, Telefono: {Telefono}";
+        archivo << endl << "{DNI},{Correo},{Telefono}";
     }
 }
 
