@@ -49,7 +49,6 @@ int main()      // INLCUIR CLEAR LLAMANDO A SYSTEM()
 {
     Concesionario concesionario({}, {});
     Administrador admin("12344464D", 628893224, "proyectosprogramacion3@gmail.com", {});
-    /*
     try {
         concesionario.leerCSV("Coches_2ndaMano.csv", 0);
         concesionario.leerCSV("", 1);
@@ -58,7 +57,6 @@ int main()      // INLCUIR CLEAR LLAMANDO A SYSTEM()
     catch (exception& e) {
         cout << e.what();
     }
-    */
     return 0;
 }
 

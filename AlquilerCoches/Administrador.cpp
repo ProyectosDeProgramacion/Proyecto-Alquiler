@@ -41,11 +41,11 @@ Cliente Administrador::buscaCliente(string Correo) {
 }
 */
 
-/*
+
 bool Administrador::iniciaSesion(Concesionario concesionario, string DNI, string Contrasena) {
     for (Cliente* i : concesionario.getClientesDisponibles()) {
         if (i->getDNI() == DNI && i->getContrasena() == Contrasena) return true;
     }
     return false;                           // ¡¡¡CAMBIAR A: --> throw ExceptionInicioSesion(); !!!
 }
-*/
+
