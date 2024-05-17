@@ -7,8 +7,8 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include <stdexcept>
 #include <cstdlib>
+#include "Exceptions.hpp"
 #include "Compra.hpp"
 #include "Coche.hpp"
 #include "Cliente.hpp"
@@ -18,26 +18,6 @@ using namespace std;
 
 // enum Estado { ALQUILADO, DISPONIBLE }; 
 // Comentado ya que esto debería estar en la clase Concesionario.
-
-// Excepciones
-class ExceptionError : public exception { //Excepcion general
-public:
-    ExceptionError(const char* message) : exception(message) {}
-};
-
-class ExceptionLecturaArchivo : public ExceptionError {
-public:
-    ExceptionLecturaArchivo() : ExceptionError("Error al leer el archivo") {}
-};
-
-class ExceptionEscrituraArchivo : public ExceptionError {
-public:
-    ExceptionEscrituraArchivo() : ExceptionError("Error al escribir en el archivo") {}
-};
-
-class ExceptionInicioSesion : public ExceptionError {
-    ExceptionInicioSesion() : ExceptionError("Error en el usuario o contrasena impuestos") {}
-};
 
 class Garaje {
 public:
@@ -80,6 +60,26 @@ int cuentaLineas() {
     return lineas;
 }
 
+// Excepciones ya metidas en el .hpp
+class ExceptionError : public exception { //Excepcion general
+public:
+    ExceptionError(const char* message) : exception(message) {}
+};
+
+class ExceptionLecturaArchivo : public ExceptionError {
+public:
+    ExceptionLecturaArchivo() : ExceptionError("Error al leer el archivo") {}
+};
+
+class ExceptionEscrituraArchivo : public ExceptionError {
+public:
+    ExceptionEscrituraArchivo() : ExceptionError("Error al escribir en el archivo") {}
+};
+
+class ExceptionInicioSesion : public ExceptionError {
+    ExceptionInicioSesion() : ExceptionError("Error en el usuario o contrasena impuestos") {}
+};
+
 int main() {
     // INLCUIR CLEAR LLAMANDO A SYSTEM()
     Coche c();
@@ -100,6 +100,7 @@ int main() {
     }
     return 0;
 }
+
 */
 
 /* REVISAR:
