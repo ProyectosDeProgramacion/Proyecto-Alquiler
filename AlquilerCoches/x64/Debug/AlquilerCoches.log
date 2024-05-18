@@ -1,2 +1,8 @@
-﻿  AlquilerCoches.cpp
-  AlquilerCoches.vcxproj -> C:\Users\Yago López\Source\Repos\Proyecto-Alquiler\AlquilerCoches\x64\Debug\AlquilerCoches.exe
+﻿  Administrador.cpp
+  AlquilerCoches.cpp
+  Cliente.cpp
+  Coche.cpp
+  Compra.cpp
+  Concesionario.cpp
+  Generando código...
+  AlquilerCoches.vcxproj -> C:\Users\ibrav\source\repos\Proyecto-Alquiler\AlquilerCoches\x64\Debug\AlquilerCoches.exe
