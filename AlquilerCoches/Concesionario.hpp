@@ -20,7 +20,7 @@ private:
 public:
     Concesionario(vector<Coche*> CochesDisponibles, vector<Cliente*>ClientesRegistrados);
     vector<Coche*> getCochesDisponibles();
-    vector<Cliente*> getClientesDisponibles(); 
+    vector<Cliente*> getClientesRegistrados(); 
     //Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
     void leerCSV(string filename, int seleccion);
 }; 

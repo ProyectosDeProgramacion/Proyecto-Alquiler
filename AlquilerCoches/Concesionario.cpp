@@ -3,6 +3,7 @@
 #include "Concesionario.hpp"
 #include "Coche.hpp"
 #include <sstream>
+#include "Exceptions.hpp"
 
 Concesionario::Concesionario(vector<Coche*> CochesDisponibles, vector<Cliente*>ClientesRegistrados) :
     CochesDisponibles(CochesDisponibles), ClientesRegistrados(ClientesRegistrados) {}
@@ -11,7 +12,7 @@ vector<Coche*> Concesionario::getCochesDisponibles() {
     return CochesDisponibles;
 }
 
-vector<Cliente*> Concesionario::getClientesDisponibles() {
+vector<Cliente*> Concesionario::getClientesRegistrados() {
     return ClientesRegistrados;
 }
 
@@ -19,7 +20,7 @@ vector<Cliente*> Concesionario::getClientesDisponibles() {
 void Concesionario::leerCSV(string filename, int seleccion) {
     ifstream file(filename);
     if (!file.is_open()) {
-        // throw ExceptionLecturaArchivo();
+        throw ExceptionLecturaArchivo();
     }
 
     cout << "Abriendo archivo: " << filename << endl;

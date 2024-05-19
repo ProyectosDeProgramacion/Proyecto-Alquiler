@@ -57,7 +57,7 @@ void Cliente::muestraClientes(string filename) { // Excepcion de lectura
     string line;
     if (!archivo.is_open()) {
         cout << "No se puede \n";
-    }//throw ExceptionLecturaArchivo();
+    }// throw ExceptionLecturaArchivo();
     while (getline(archivo, line)) {
         cout << line << endl;
     }

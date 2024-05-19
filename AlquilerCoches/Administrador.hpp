@@ -27,8 +27,8 @@ public:
     string getCorreo();
     // int getnClientes();
     void muestraClientes();
-    // Cliente buscaCliente(string Correo); REVISAR!!
-     bool iniciaSesion(Concesionario concesionario, string DNI, string Contrasena);
+    Cliente buscaCliente(string Correo); //REVISAR!!
+    bool iniciaSesion(Concesionario concesionario, string DNI, string Contrasena);
 };
 
 #endif

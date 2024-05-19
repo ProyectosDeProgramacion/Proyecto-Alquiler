@@ -19,6 +19,9 @@ using namespace std;
 // enum Estado { ALQUILADO, DISPONIBLE }; 
 // Comentado ya que esto debería estar en la clase Concesionario.
 
+//ESTE!!!
+
+
 class Garaje {
 public:
     vector<Coche*> CochesDisponibles;
