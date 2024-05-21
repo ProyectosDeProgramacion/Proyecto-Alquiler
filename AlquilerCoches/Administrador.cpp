@@ -48,4 +48,4 @@ bool Administrador::iniciaSesion(Concesionario concesionario, string DNI, string
     }
     return false;                           // ¡¡¡CAMBIAR A: --> throw ExceptionInicioSesion(); !!!
 }
-
+//Comentario 1
