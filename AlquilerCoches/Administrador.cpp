@@ -33,6 +33,7 @@ void Administrador::muestraClientes() {
 }
 
 
+
 Cliente Administrador::buscaCliente(string Correo) {
     for (Cliente* c : listaClientes) {
         if (c->getCorreo() == Correo) return (*c);
