@@ -1,5 +1,6 @@
 #include "Concesionario.hpp"
 #include "Coche.hpp"
+  
 
 vector<Coche*> filtrarPorMarca(const vector<Coche*>& coches, const string& marca) {
     vector<Coche*> filtrados;
@@ -14,7 +15,7 @@ vector<Coche*> filtrarPorMarca(const vector<Coche*>& coches, const string& marca
 vector<Coche*> filtrarPorModelo(const vector<Coche*>& coches, const string& modelo) {
     vector<Coche*> filtrados;
     for (const auto& coche : coches) {
-        if (coche->getModelo() == modelo) {
+        if (coche->getmodelo() == modelo) {
             filtrados.push_back(coche);
         }
     }
@@ -44,7 +45,7 @@ vector<Coche*> filtrarPorTipoCombustible(const vector<Coche*>& coches, const str
 vector<Coche*> filtrarPorAnoFabricacion(const vector<Coche*>& coches, int ano) {
     vector<Coche*> filtrados;
     for (const auto& coche : coches) {
-        if (coche->getAnoFabricacion() == ano) {
+        if (stoi(coche->getAnoFabricacion()) == ano) {
             filtrados.push_back(coche);
         }
     }
@@ -71,40 +72,42 @@ void mostrarMenu() {
     cout << "5. Año de Fabricación\n";
     cout << "6. Kilómetros\n";
     cout << "7. Mostrar resultados y salir\n";
-    cout << "8. Salir sin mostrar resultados\n";
+    cout << "8. Salir sin mostrar resultados\n---> ";
 }
 
 int main() {
 
-    Concesionario concesionario(coches);
+    //Concesionario concesionario(coches);
 
-    vector<Coche*> cochesFiltrados = concesionario.getCochesDisponibles();
-    string opcion;
+    vector<Coche*> cochesFiltrados;
+    int opcion;
     vector<string> opcionesSeleccionadas;
 
     while (true) {
         mostrarMenu();
         cin >> opcion;
-
-        if (opcion == "1") {
+        switch (opcion) {
+        case 1:
             opcionesSeleccionadas.push_back("marca");
-        }
-        else if (opcion == "2") {
+            break;
+        case 2:
             opcionesSeleccionadas.push_back("modelo");
-        }
-        else if (opcion == "3") {
+            break;
+
+        case 3:
             opcionesSeleccionadas.push_back("precio");
-        }
-        else if (opcion == "4") {
+            break;
+
+        case 4:
             opcionesSeleccionadas.push_back("tipoCombustible");
-        }
-        else if (opcion == "5") {
+            break;
+        case 5:
             opcionesSeleccionadas.push_back("anoFabricacion");
-        }
-        else if (opcion == "6") {
+            break;
+        case 6:
             opcionesSeleccionadas.push_back("kilometros");
-        }
-        else if (opcion == "7") {
+            break;
+        case 7:
             for (const auto& filtro : opcionesSeleccionadas) {
                 if (filtro == "marca") {
                     string marca;
@@ -142,22 +145,23 @@ int main() {
                     cin >> kilometros;
                     cochesFiltrados = filtrarPorKilometros(cochesFiltrados, kilometros);
                 }
+
+                cout << "\nCoches filtrados:\n";
+                for (const auto& coche : cochesFiltrados) {
+                    cout << "Marca: " << coche->getMarca() << ", Modelo: " << coche->getmodelo()
+                        << ", Precio: " << coche->getPrecio() << ", Tipo de Combustible: " << coche->getTipoCombustible()
+                        << ", Año de Fabricación: " << coche->getAnoFabricacion() << ", Kilómetros: " << coche->getKilometros() << endl;
+                }
             }
 
-            cout << "\nCoches filtrados:\n";
-            for (const auto& coche : cochesFiltrados) {
-                cout << "Marca: " << coche->getMarca() << ", Modelo: " << coche->getModelo()
-                    << ", Precio: " << coche->getPrecio() << ", Tipo de Combustible: " << coche->getTipoCombustible()
-                    << ", Año de Fabricación: " << coche->getAnoFabricacion() << ", Kilómetros: " << coche->getKilometros() << endl;
-            }
+            break;
+        case 8:
+
+            cout << "\nSaliendo del programa sin mostrar resultados...\n";
+            break;
+        default:
+            cout << "\nOpcion invalida\n";
             break;
         }
-        else if (opcion == "8") {
-            cout << "Saliendo del programa sin mostrar resultados.\n";
-            break;
-        }
-        else {
-
-
-
-
+    }
+}
