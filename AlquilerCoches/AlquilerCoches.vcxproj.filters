@@ -33,9 +33,6 @@
     <ClCompile Include="Concesionario.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Prediction.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="Informe.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
