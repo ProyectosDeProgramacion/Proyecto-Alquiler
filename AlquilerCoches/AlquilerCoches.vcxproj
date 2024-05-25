@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -134,7 +134,6 @@
     <ClCompile Include="Compra.cpp" />
     <ClCompile Include="Concesionario.cpp" />
     <ClCompile Include="Prediction.cpp" />
-    <ClCompile Include="Informe.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Administrador.hpp" />
@@ -143,6 +142,7 @@
     <ClInclude Include="Compra.hpp" />
     <ClInclude Include="Concesionario.hpp" />
     <ClInclude Include="Exceptions.hpp" />
+    <ClInclude Include="Prediction.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

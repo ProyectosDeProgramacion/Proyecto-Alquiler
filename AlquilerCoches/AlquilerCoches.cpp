@@ -14,6 +14,7 @@
 #include "Cliente.hpp"
 #include "Administrador.hpp"
 #include "Concesionario.hpp"
+#include "Prediction.hpp"
 using namespace std;
 
 // enum Estado { ALQUILADO, DISPONIBLE }; 
@@ -28,13 +29,12 @@ public:
     Garaje(vector<Coche*> CochesDisponibles) : CochesDisponibles(CochesDisponibles) {}
 };
 
-int main()      // INLCUIR CLEAR LLAMANDO A SYSTEM()
-{
+int main(){      // INLCUIR CLEAR LLAMANDO A SYSTEM()
     Concesionario concesionario({}, {});
     Administrador admin("12344464D", 628893224, "proyectosprogramacion3@gmail.com", {});
     try {
         concesionario.leerCSV("Coches_2ndaMano.csv", 0);
-        cout << "Lista coches: " << concesionario.getCochesDisponibles(); //Inlcuir mostrarCoches en concesionario
+        // cout << "Lista coches: " << concesionario.getCochesDisponibles(); //Inlcuir mostrarCoches en concesionario
         concesionario.leerCSV("", 1);
         admin.iniciaSesion(concesionario,"012883D", "jddd");
     }

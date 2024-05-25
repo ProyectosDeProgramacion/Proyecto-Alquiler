@@ -1,8 +1,10 @@
+// (.cpp) PREDICTION
+
 #include "Concesionario.hpp"
 #include "Coche.hpp"
-  
+#include "Prediction.hpp"
 
-vector<Coche*> filtrarPorMarca(const vector<Coche*>& coches, const string& marca) {
+vector<Coche*> Prediction::filtrarPorMarca(const vector<Coche*>& coches, const string& marca) {
     vector<Coche*> filtrados;
     for (const auto& coche : coches) {
         if (coche->getMarca() == marca) {
@@ -12,7 +14,7 @@ vector<Coche*> filtrarPorMarca(const vector<Coche*>& coches, const string& marca
     return filtrados;
 }
 
-vector<Coche*> filtrarPorModelo(const vector<Coche*>& coches, const string& modelo) {
+vector<Coche*> Prediction::filtrarPorModelo(const vector<Coche*>& coches, const string& modelo) {
     vector<Coche*> filtrados;
     for (const auto& coche : coches) {
         if (coche->getmodelo() == modelo) {
@@ -22,7 +24,7 @@ vector<Coche*> filtrarPorModelo(const vector<Coche*>& coches, const string& mode
     return filtrados;
 }
 
-vector<Coche*> filtrarPorPrecio(const vector<Coche*>& coches, float precio) {
+vector<Coche*> Prediction::filtrarPorPrecio(const vector<Coche*>& coches, float precio) {
     vector<Coche*> filtrados;
     for (const auto& coche : coches) {
         if (coche->getPrecio() <= precio) {
@@ -32,7 +34,7 @@ vector<Coche*> filtrarPorPrecio(const vector<Coche*>& coches, float precio) {
     return filtrados;
 }
 
-vector<Coche*> filtrarPorTipoCombustible(const vector<Coche*>& coches, const string& tipoCombustible) {
+vector<Coche*> Prediction::filtrarPorTipoCombustible(const vector<Coche*>& coches, const string& tipoCombustible) {
     vector<Coche*> filtrados;
     for (const auto& coche : coches) {
         if (coche->getTipoCombustible() == tipoCombustible) {
@@ -42,7 +44,7 @@ vector<Coche*> filtrarPorTipoCombustible(const vector<Coche*>& coches, const str
     return filtrados;
 }
 
-vector<Coche*> filtrarPorAnoFabricacion(const vector<Coche*>& coches, int ano) {
+vector<Coche*> Prediction::filtrarPorAnoFabricacion(const vector<Coche*>& coches, int ano) {
     vector<Coche*> filtrados;
     for (const auto& coche : coches) {
         if (stoi(coche->getAnoFabricacion()) == ano) {
@@ -52,7 +54,7 @@ vector<Coche*> filtrarPorAnoFabricacion(const vector<Coche*>& coches, int ano) {
     return filtrados;
 }
 
-vector<Coche*> filtrarPorKilometros(const vector<Coche*>& coches, int kilometros) {
+vector<Coche*> Prediction::filtrarPorKilometros(const vector<Coche*>& coches, int kilometros) {
     vector<Coche*> filtrados;
     for (const auto& coche : coches) {
         if (coche->getKilometros() <= kilometros) {
@@ -63,7 +65,7 @@ vector<Coche*> filtrarPorKilometros(const vector<Coche*>& coches, int kilometros
 }
 
 
-void mostrarMenu() {
+void Prediction::mostrarMenu() {
     cout << "\nSeleccione una opción para filtrar los coches:\n";
     cout << "1. Marca\n";
     cout << "2. Modelo\n";
@@ -75,7 +77,7 @@ void mostrarMenu() {
     cout << "8. Salir sin mostrar resultados\n---> ";
 }
 
-int main() {
+int Prediction::main() {
 
     //Concesionario concesionario(coches);
 
