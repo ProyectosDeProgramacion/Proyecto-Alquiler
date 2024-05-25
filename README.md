@@ -7,10 +7,10 @@ In this repository we include all the main code with the whole branches which be
 
 It provides:
 
-Complexity of vectors joined between classes
-Sophisticated use of pointer mechanics in relation to function call addresses
-Separation of hpp and cpp files
-Reading and writing csv files
-Common use of exception, vectors & array functions
-Tools for integrating C++ code
-Useful functions of modular and efficient software integration
+- Complexity of vectors joined between classes
+- Sophisticated use of pointer mechanics in relation to function call addresses
+- Separation of hpp and cpp files
+- Reading and writing csv files
+- Common use of exception, vectors & array functions
+- Tools for integrating C++ code
+- Useful functions of modular and efficient software integration
