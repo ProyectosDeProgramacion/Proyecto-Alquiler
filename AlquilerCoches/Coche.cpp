@@ -3,9 +3,9 @@
 #include "Coche.hpp"
 // #include <string>
 
-Coche::Coche(string Marca, string Modelo, float Precio, string TipoCombustible, string anoFabricacion, int Kilometros, int Estado) :
+Coche::Coche(string Marca, string Modelo, float Precio, string TipoCombustible, string anoFabricacion, int Kilometros, int Estado, int id) :
     Marca(Marca), Modelo(Modelo), Precio(Precio), TipoCombustible(TipoCombustible), AnoFabricacion(anoFabricacion),
-    Kilometros(Kilometros), Estado(Estado) {}
+    Kilometros(Kilometros), Estado(Estado), id(id) {}
 
 string Coche::getMarca() {
     return this->Marca;
@@ -44,7 +44,9 @@ int Coche::getKilometros() {
 int Coche::getEstado() {
     return this->Estado;
 }
-
+int Coche::getID() {
+    return this->id;
+}
 /*
 void getListaCoches() {
     cout << "Los coches se muestran por marca a continuacion: \n";

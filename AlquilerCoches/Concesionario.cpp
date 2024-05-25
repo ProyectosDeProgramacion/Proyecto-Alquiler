@@ -4,9 +4,10 @@
 #include "Coche.hpp"
 #include <sstream>
 #include "Exceptions.hpp"
+#include "Compra.hpp"
 
-Concesionario::Concesionario(vector<Coche*> CochesDisponibles, vector<Cliente*>ClientesRegistrados) :
-    CochesDisponibles(CochesDisponibles), ClientesRegistrados(ClientesRegistrados) {}
+Concesionario::Concesionario(vector<Coche*> CochesDisponibles, vector<Cliente*>ClientesRegistrados, vector<Compra*> ComprasRealizadas) :
+    CochesDisponibles(CochesDisponibles), ClientesRegistrados(ClientesRegistrados), ComprasRealizadas(ComprasRealizadas) {}
 
 vector<Coche*> Concesionario::getCochesDisponibles() {
     return CochesDisponibles;
@@ -15,6 +16,24 @@ vector<Coche*> Concesionario::getCochesDisponibles() {
 vector<Cliente*> Concesionario::getClientesRegistrados() {
     return ClientesRegistrados;
 }
+
+vector<Compra*> Concesionario::getComprasRealizadas() {
+    return ComprasRealizadas;
+}
+
+void Concesionario::AnadirCompra(Compra *compra){
+
+    ComprasRealizadas.push_back(compra);
+    cout << "\nSe ha anadido correctamente la compra!\n";
+
+}
+
+Coche *Concesionario::buscaCoche(int id) {
+    for (Coche* c : getCochesDisponibles()) {
+        if(c->getID() == id) return c;
+    }
+}
+
 
 //Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
 void Concesionario::leerCSV(string filename, int seleccion) {
@@ -28,6 +47,7 @@ void Concesionario::leerCSV(string filename, int seleccion) {
     string line;
     getline(file, line); // Ignoramos la primera línea del archivo
     int estado = DISPONIBLE;
+    int id = 0;
 
     while (getline(file, line)) {
         stringstream ss(line);
@@ -40,8 +60,9 @@ void Concesionario::leerCSV(string filename, int seleccion) {
 
         if (seleccion == COCHE) {
             if (tokens[5] == "-1") estado = ALQUILADO;
-            Coche* coche = new Coche(tokens[2], tokens[4], stof(tokens[5]), tokens[7], tokens[8], stoi(tokens[9]), estado);
+            Coche* coche = new Coche(tokens[2], tokens[4], stof(tokens[5]), tokens[7], tokens[8], stoi(tokens[9]), estado, id);
             CochesDisponibles.push_back(coche);
+            id++;
         }
         else if (seleccion == CLIENTE) {
             Cliente* cliente = new Cliente(tokens[0], stoi(tokens[1]), tokens[2], tokens[3], {});

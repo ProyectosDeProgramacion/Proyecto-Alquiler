@@ -17,9 +17,10 @@ private:
     string Fiabilidad;
     int Kilometros;
     int Estado;
+    int id;
     //list<Coche> listaCoches {};
 public:
-    Coche(string Marca, string Modelo, float Precio, string TipoCombustible, string anoFabricacion, int Kilometros, int Estado);
+    Coche(string Marca, string Modelo, float Precio, string TipoCombustible, string anoFabricacion, int Kilometros, int Estado, int id);
     /*
     Coche(string Marca, string Modelo, float Precio, string TipoCombustible, string anoFabricacion, int Kilometros, int Estado) :
         Marca(Marca), Modelo(Modelo), Precio(Precio), TipoCombustible(TipoCombustible), AnoFabricacion(anoFabricacion),
@@ -34,6 +35,7 @@ public:
     // string getFiabilidad()
     int getKilometros();
     int getEstado();
+    int getID();
     // void getListaCoches();
 
     // Coche(string Marca, string Matricula, string Modelo, float Precio, string TipoCombustible, Fecha anoFabricacion, string Fiabilidad, int Kilometros, int Estado, list<Coche> Coches) : 

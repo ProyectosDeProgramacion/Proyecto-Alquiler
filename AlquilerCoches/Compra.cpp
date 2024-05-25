@@ -2,15 +2,15 @@
 
 #include "Compra.hpp"
 
-Compra::Compra(string Coche, string Matricula, int FechaInicio, int FechaFin, string DNICliente) :
+Compra::Compra(string Coche, string Modelo, int FechaInicio, int FechaFin, string DNICliente) :
     Coche(Coche), Matricula(Matricula), FechaInicio(FechaInicio), FechaFin(FechaFin), DNICliente(DNICliente) {}
 
 string Compra::getCoche() {
     return this->Coche;
 }
 
-string Compra::getMatricula() {
-    return this->Matricula;
+string Compra::getModelo() {
+    return this->Modelo;
 }
 
 int Compra::getFechaInicio() {

@@ -6,6 +6,8 @@
 #include <vector>
 #include "Coche.hpp"
 #include "Cliente.hpp"
+#include "Compra.hpp"
+
 using namespace std;
 
 #ifndef CONCESIONARIO_HPP
@@ -17,10 +19,14 @@ private:
     enum Seleccion { COCHE, CLIENTE };
     vector<Coche*> CochesDisponibles;
     vector<Cliente*> ClientesRegistrados;
+    vector<Compra*> ComprasRealizadas;
 public:
-    Concesionario(vector<Coche*> CochesDisponibles, vector<Cliente*>ClientesRegistrados);
+    Concesionario(vector<Coche*> CochesDisponibles, vector<Cliente*>ClientesRegistrados, vector<Compra*> ComprasRealizadas);
     vector<Coche*> getCochesDisponibles();
     vector<Cliente*> getClientesRegistrados(); 
+    vector<Compra*> getComprasRealizadas();
+    void AnadirCompra(Compra *compra);
+    Coche* buscaCoche(int id);
     //Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
     void leerCSV(string filename, int seleccion);
 }; 
