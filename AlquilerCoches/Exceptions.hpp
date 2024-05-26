@@ -1,8 +1,6 @@
 // (.hpp) EXCEPTIONS
 
 #pragma once
-
-
 #ifndef EXCEPTIONS_HPP
 #define EXCEPTIONS_HPP
 
@@ -16,21 +14,20 @@ public:
     ExceptionError(const char* message) : exception(message) {}
 };
 
-class ExceptionLecturaArchivo : public ExceptionError {
+class ExceptionReadingFile : public ExceptionError {
 public:
-    ExceptionLecturaArchivo() : ExceptionError("Error al leer el archivo") {}
+    ExceptionReadingFile() : ExceptionError("Error reading the file.") {}
 };
 
-class ExceptionEscrituraArchivo : public ExceptionError {
+class ExceptionWritingFile : public ExceptionError {
 public:
-    ExceptionEscrituraArchivo() : ExceptionError("Error al escribir en el archivo") {}
+    ExceptionWritingFile() : ExceptionError("Error writing the file.") {}
 };
 
-class ExceptionInicioSesion : public ExceptionError {
+class ExceptionLogin : public ExceptionError {
 public:
-    ExceptionInicioSesion() : ExceptionError("Error en el usuario o contrasena impuestos") {}
+    ExceptionLogin() : ExceptionError("Error in user or password imposed.") {}
 };
-
 
 #endif // !EXCEPTIONS_HPP
 

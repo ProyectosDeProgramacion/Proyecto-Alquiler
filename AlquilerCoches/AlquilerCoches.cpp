@@ -9,74 +9,62 @@
 #include <vector>
 #include <cstdlib>
 #include "Exceptions.hpp"
-#include "Compra.hpp"
-#include "Coche.hpp"
-#include "Cliente.hpp"
-#include "Administrador.hpp"
-#include "Concesionario.hpp"
+#include "Purchase.hpp"
+#include "Car.hpp"
+#include "Customer.hpp"
+#include "Administrator.hpp"
+#include "Dealership.hpp"
 #include "Prediction.hpp"
 #include "Report.hpp"
 using namespace std;
-
 
 //Seguimos el progreso en la rama main del programa
 
 int main()
 {
-	Dealership concesionario({}, {}, {});
+	Dealership dealership({}, {}, {});
 	Administrator admin("12344464D", 628893224, "proyectosprogramacion3@gmail.com", {});
 	Prediction prediction;
 	Report report;
 	try {
-		concesionario.leerCSV("Coches_2ndaMano.csv", 0);
-		concesionario.leerCSV("Clientes.txt", 1);
-		admin.Registered(concesionario);
-		bool marcador = true;
-		while (marcador) {
-			switch (concesionario.Menu()) {
+		dealership.readCSV("Coches_2ndaMano.csv", 0);
+		dealership.readCSV("Customers.txt", 1);
+		admin.Registered(dealership);
+		bool counter = true;
+		while (counter) {
+			switch (dealership.Menu()) {
 			case 1:
-				for (Car* coche : concesionario.getCochesDisponibles()) {
-					concesionario.muestraCoche(coche);
+				for (Car* coche : dealership.getAvailableCars()) {
+					dealership.showCar(coche);
 				}
-				cout << "\n-----FIN DE LISTA ------\n";
+				cout << "\n----- END OF THE LIST ------\n";
 				break;
 
 			case 2:
-
 				prediction.main();
 				int id;
-				cout << "\nIntroduce el ID del coche que quieres comprar:\n--> ";
+				cout << "\nEnter the ID of the car you want to buy:\n--> ";
 				cin >> id;
 
 				//concesionario.siCompra(concesionario, admin, id);
 
 				//if (!haComprado) {
-					cout << "\n Que otra accion deseas hacer?\n";
+					cout << "\n What other action do you wish to take?\n";
 				//}
 				break;
 
 			case 3:
-				report.PurchaseReport(concesionario, "ComprasRealizadas.txt");
-				cout << "\nEl informe se ha realizado correctamente!\n";
+				report.PurchaseReport(dealership, "Purchases.txt");
+				cout << "\nThe report has been successfully completed!\n";
 				break;
 
 			case 5:
-				cout << "\nSaliendo...\n";
-				marcador = false;
-
-
+				cout << "\nLeaving...\n";
+				counter = false;
 			default:
-				cout << "\nEso no es una opcion...\n";
+				cout << "\nThat's not an option...\n";
 			}
-
-
-
 		}
-
-
-
-
-
 	}
 	catch (exception& e) {
 		cout << e.what();

@@ -1,24 +1,22 @@
 // (.hpp) PREDICTION
+
 #pragma once
-
-
 #ifndef PREDICTION_HPP
 #define PREDICTION_HPP
 
 #include <iostream>
-#include "Concesionario.hpp"
-#include "Coche.hpp"
+#include "Dealership.hpp"
+#include "Car.hpp"
 using namespace std;
-
 
 class Prediction {
 public:
-    vector<Car*> filtrarPorMarca(const vector<Car*> coches, const string& marca);
-    vector<Car*> filtrarPorModelo(const vector<Car*>& coches, const string& modelo);
-    vector<Car*> filtrarPorPrecio(const vector<Car*>& coches, float precio);
-    vector<Car*> filtrarPorTipoCombustible(const vector<Car*>& coches, const string& tipoCombustible);
-    vector<Car*> filtrarPorAnoFabricacion(const vector<Car*>& coches, int ano);
-    vector<Car*> filtrarPorKilometros(const vector<Car*>& coches, int kilometros);
+    vector<Car*> FilterByBrand(const vector<Car*> cars, const string& brand);
+    vector<Car*> FilterByModel(const vector<Car*>& cars, const string& model);
+    vector<Car*> FilterByPrice(const vector<Car*>& cars, float price);
+    vector<Car*> FilterByFuelType(const vector<Car*>& cars, const string& fuelType);
+    vector<Car*> FilteredByProdYear(const vector<Car*>& cars, int year);
+    vector<Car*> FilteredByKms(const vector<Car*>& cars, int kms);
     void showMenu();
     int main();
 

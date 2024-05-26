@@ -1,80 +1,79 @@
 // (.cpp) PREDICTION
 
-#include "Concesionario.hpp"
-#include "Coche.hpp"
+#include "Dealership.hpp"
+#include "Car.hpp"
 #include "Prediction.hpp"
 
-vector<Car*> Prediction::filtrarPorMarca(const vector<Car*> coches, const string& marca) {
-    vector<Car*> filtrados;
-    for (const auto& coche : coches) {
-        if (coche->getMarca() == marca) {
-            filtrados.push_back(coche);
+vector<Car*> Prediction::FilterByBrand(const vector<Car*> cars, const string& brand) {
+    vector<Car*> filtered;
+    for (const auto& car : cars) {
+        if (car->getBrand() == brand) {
+            filtered.push_back(car);
         }
     }
-    return filtrados;
+    return filtered;
 }
 
-vector<Car*> Prediction::filtrarPorModelo(const vector<Car*>& coches, const string& modelo) {
-    vector<Car*> filtrados;
-    for (const auto& coche : coches) {
-        if (coche->getmodelo() == modelo) {
-            filtrados.push_back(coche);
+vector<Car*> Prediction::FilterByModel(const vector<Car*>& cars, const string& model) {
+    vector<Car*> filtered;
+    for (const auto& car : cars) {
+        if (car->getModel() == model) {
+            filtered.push_back(car);
         }
     }
-    return filtrados;
+    return filtered;
 }
 
-vector<Car*> Prediction::filtrarPorPrecio(const vector<Car*>& coches, float precio) {
-    vector<Car*> filtrados;
-    for (const auto& coche : coches) {
-        if (coche->getPrecio() <= precio) {
-            filtrados.push_back(coche);
+vector<Car*> Prediction::FilterByPrice(const vector<Car*>& cars, float price) {
+    vector<Car*> filtered;
+    for (const auto& car : cars) {
+        if (car->getPrice() <= price) {
+            filtered.push_back(car);
         }
     }
-    return filtrados;
+    return filtered;
 }
 
-vector<Car*> Prediction::filtrarPorTipoCombustible(const vector<Car*>& coches, const string& tipoCombustible) {
-    vector<Car*> filtrados;
-    for (const auto& coche : coches) {
-        if (coche->getTipoCombustible() == tipoCombustible) {
-            filtrados.push_back(coche);
+vector<Car*> Prediction::FilterByFuelType(const vector<Car*>& cars, const string& FuelType) {
+    vector<Car*> filtered;
+    for (const auto& car : cars) {
+        if (car->getFuelType() == FuelType) {
+            filtered.push_back(car);
         }
     }
-    return filtrados;
+    return filtered;
 }
 
-vector<Car*> Prediction::filtrarPorAnoFabricacion(const vector<Car*>& coches, int ano) {
-    vector<Car*> filtrados;
-    for (const auto& coche : coches) {
-        if (stoi(coche->getAnoFabricacion()) == ano) {
-            filtrados.push_back(coche);
+vector<Car*> Prediction::FilteredByProdYear(const vector<Car*>& cars, int year) {
+    vector<Car*> filtered;
+    for (const auto& car : cars) {
+        if (stoi(car->getYearProd()) == year) {
+            filtered.push_back(car);
         }
     }
-    return filtrados;
+    return filtered;
 }
 
-vector<Car*> Prediction::filtrarPorKilometros(const vector<Car*>& coches, int kilometros) {
-    vector<Car*> filtrados;
-    for (const auto& coche : coches) {
-        if (coche->getKilometros() <= kilometros) {
-            filtrados.push_back(coche);
+vector<Car*> Prediction::FilteredByKms(const vector<Car*>& cars, int kms) {
+    vector<Car*> filtered;
+    for (const auto& car : cars) {
+        if (car->getKms() <= kms) {
+            filtered.push_back(car);
         }
     }
-    return filtrados;
+    return filtered;
 }
-
 
 void Prediction::showMenu() {
-    cout << "\nSeleccione una opción para filtrar los coches:\n";
-    cout << "1. Marca\n";
-    cout << "2. Modelo\n";
-    cout << "3. Precio\n";
-    cout << "4. Tipo de Combustible\n";
-    cout << "5. Año de Fabricación\n";
-    cout << "6. Kilómetros\n";
-    cout << "7. Mostrar resultados y salir\n";
-    cout << "8. Salir sin mostrar resultados\n---> ";
+    cout << "Select an option to filter the cars:\n";
+    cout << "1. Make";
+    cout << "2. Model";
+    cout << "3. Price";
+    cout << "4. Fuel Type."; 
+    cout << "5. Year of Manufacture";
+    cout << "6. Kilometers.";
+    cout << "7. Show results and exit.";
+    cout << "8. Exit without showing results--->";
 }
 
 int Prediction::main() {
@@ -90,79 +89,77 @@ int Prediction::main() {
         cin >> options;
         switch (options) {
         case 1:
-            SelectedOptions.push_back("marca");
+            SelectedOptions.push_back("brand");
             break;
         case 2:
-            SelectedOptions.push_back("modelo");
+            SelectedOptions.push_back("model");
             break;
 
         case 3:
-            SelectedOptions.push_back("precio");
+            SelectedOptions.push_back("price");
             break;
 
         case 4:
-            SelectedOptions.push_back("tipoCombustible");
+            SelectedOptions.push_back("fuelType");
             break;
         case 5:
-            SelectedOptions.push_back("anoFabricacion");
+            SelectedOptions.push_back("prodYear");
             break;
         case 6:
-            SelectedOptions.push_back("kilometros");
+            SelectedOptions.push_back("kms");
             break;
         case 7:
             for (const auto& filter : SelectedOptions) {
-                if (filter == "marca") {
+                if (filter == "brand") {
                     string brand;
-                    cout << "Ingrese la marca: ";
+                    cout << "Introduce the brand: ";
                     cin >> brand;
-                    LeakedCars = filtrarPorMarca(LeakedCars, brand);
+                    LeakedCars = FilterByBrand(LeakedCars, brand);
                 }
-                else if (filter == "modelo") {
-                    string modelo;
-                    cout << "Ingrese el modelo: ";
-                    cin >> modelo;
-                    LeakedCars = filtrarPorModelo(LeakedCars, modelo);
+                else if (filter == "model") {
+                    string model;
+                    cout << "Introduce the model: ";
+                    cin >> model;
+                    LeakedCars = FilterByModel(LeakedCars, model);
                 }
-                else if (filter == "precio") {
+                else if (filter == "price") {
                     float price;
-                    cout << "Ingrese el precio máximo: ";
+                    cout << "Introduce el max. price: ";
                     cin >> price;
-                    LeakedCars = filtrarPorPrecio(LeakedCars, price);
+                    LeakedCars = FilterByPrice(LeakedCars, price);
                 }
-                else if (filter == "tipoCombustible") {
+                else if (filter == "fuelType") {
                     string fuelType;
-                    cout << "Ingrese el tipo de combustible: ";
+                    cout << "Introduce the tipo de combustible: ";
                     cin >> fuelType;
-                    LeakedCars = filtrarPorTipoCombustible(LeakedCars, fuelType);
+                    LeakedCars = FilterByFuelType(LeakedCars, fuelType);
                 }
-                else if (filter == "anoFabricacion") {
+                else if (filter == "prodYear") {
                     int year;
-                    cout << "Ingrese el año de fabricación: ";
+                    cout << "Introduce the prod. year: ";
                     cin >> year;
-                    LeakedCars = filtrarPorAnoFabricacion(LeakedCars, year);
+                    LeakedCars = FilteredByProdYear(LeakedCars, year);
                 }
-                else if (filter == "kilometros") {
-                    int kilometros;
-                    cout << "Ingrese el número máximo de kilómetros: ";
-                    cin >> kilometros;
-                    LeakedCars = filtrarPorKilometros(LeakedCars, kilometros);
+                else if (filter == "kms") {
+                    int kms;
+                    cout << "Introduce the max. number of kms: ";
+                    cin >> kms;
+                    LeakedCars = FilteredByKms(LeakedCars, kms);
                 }
 
-                cout << "\nCoches filtrados:\n";
+                cout << "\nFiltered Cars:\n";
                 for (const auto& car : LeakedCars) {
-                    cout << "\nID: " << car->getID() << "; Marca: " << car->getMarca() << ", Modelo: " << car->getmodelo()
-                        << ", Precio: " << car->getPrecio() << ", Tipo de Combustible: " << car->getTipoCombustible()
-                        << ", Año de Fabricación: " << car->getAnoFabricacion() << ", Kilómetros: " << car->getKilometros() << endl;
+                    cout << "\nID: " << car->getID() << "; Brand: " << car->getBrand() << ", Model: " << car->getModel()
+                        << ", Price: " << car->getPrice() << ", Fuel Type: " << car->getFuelType()
+                        << ", Prod. Year: " << car->getYearProd() << ", Kilometers: " << car->getKms() << '\n';
                 }
             }
-
             break;
         case 8:
-
-            cout << "\nSaliendo del programa sin mostrar resultados...\n";
+            cout << "\nQuiting the program without showing results...\n";
             break;
         default:
-            cout << "\nOpcion invalida\n";
+            cout << "\nInvalid option.\n";
             break;
         }
     }

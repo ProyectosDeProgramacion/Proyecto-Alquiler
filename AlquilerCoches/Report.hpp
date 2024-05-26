@@ -1,16 +1,14 @@
-#pragma once
+// (.hpp) REPORT
 
+#pragma once
 #ifndef REPORT_HPP
 #define REPORT_HPP
 
-#include "Coche.hpp"
+#include "Car.hpp"
 #include "Exceptions.hpp"
-#include "Compra.hpp"
+#include "Purchase.hpp"
+#include "Dealership.hpp"
 #include <fstream>
-#include "Concesionario.hpp"
-
-
-
 
 class Report {
 public:
