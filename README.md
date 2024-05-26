@@ -38,3 +38,5 @@ Code of Conduct:
 Small improvements or fixes are always appreciated. Thanks to GitHub we:
 - Review pull requests
 - Help us stay on top of new and old issues
+
+Our preferred channels of communication are all public, but if you’d like to give any feedback to us in private first, contact our community coordinators at proyectosprogra3@gmail.com
