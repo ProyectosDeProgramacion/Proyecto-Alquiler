@@ -17,7 +17,7 @@
 
 using namespace std;
 
-// Definicion de mentira
+// Definicion de mentira (declaracion adelantada)
 class Administrator;
 
 
@@ -34,7 +34,7 @@ public:
     vector<Customer*> getClientesRegistrados();
     vector<Purchase*> getPurchases();
     void addPurchase(Purchase* compra);
-    void anadirCliente(Customer* cliente);
+    void addClient(Customer* cliente);
     Car* buscaCoche(int id);
     string muestraCoche(Car* c);
     bool siCompra(Administrator admin, int id);

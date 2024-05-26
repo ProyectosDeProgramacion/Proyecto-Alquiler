@@ -21,7 +21,7 @@ private:
     vector<Car*> Carrito;
 
 public:
-    Customer(string DNI, int Telefono, string Correo, string Contrasena, vector<Car*> Carrito);
+    Customer(string DNI, int Telefono, string Email, string Contrasena, vector<Car*> Carrito);
     /*
     Cliente(string DNI, int Telefono, string Correo, vector<Coche*> Carrito) :
         DNI(DNI), Telefono(Telefono), Correo(Correo), Carrito(Carrito) {}

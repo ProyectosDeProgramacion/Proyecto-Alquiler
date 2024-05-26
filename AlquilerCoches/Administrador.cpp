@@ -56,7 +56,7 @@ void Administrator::logCustomer(Dealership concesionario) {
     cout << "\nIntroduce tu contrasena: ";
     cin >> Password;
     Customer* customer = new Customer(ID, phoneNumber, Email, Password, {});
-    concesionario.anadirCliente(customer);
+    concesionario.addClient(customer);
     CustomerList.push_back(customer);
     customer->guardaDatos("Clientes.txt");
 }

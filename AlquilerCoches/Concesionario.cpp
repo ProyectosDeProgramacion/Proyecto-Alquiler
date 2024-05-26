@@ -29,7 +29,7 @@ void Dealership::addPurchase(Purchase* compra) {
 
 }
 
-void Dealership::anadirCliente(Customer* cliente) {
+void Dealership::addClient(Customer* cliente) {
 
     ClientesRegistrados.push_back(cliente);
     cout << "\nsSe ha anadido correctamente al cliente\n";
@@ -111,3 +111,12 @@ void Dealership::leerCSV(string filename, int seleccion) {
     file.close();
     cout << "Los datos se han cargado correctamente.\n";
 }
+
+/*
+bool Dealership::logIn( string ID, string Password) {
+    for (Customer* i : this->getClientesRegistrados()) {
+        if (i->getDNI() == ID && i->getContrasena() == Password) return true;
+    }
+    throw ExceptionInicioSesion();
+}
+*/
