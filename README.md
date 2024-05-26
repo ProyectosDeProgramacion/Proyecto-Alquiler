@@ -22,8 +22,6 @@ In this repository we include all the main code separated by each branch which b
 All cpp files mentioned BEFORE, are on the: 
 - Main Branch: 'main'
 
-Once the user compiles the programe, it automaticly will generate a 
-
 Furthermore, we have the following branches that correspond to the two modules of the project that have been mentioned throughout the 'Daily Scrums’: More info by going throught the README.md of each branch.
 - Module 1. Cars Filter Prediction (Predicción de Filtro Coches): 'filtro-coches'
 - Module 2. Cars List Receipt (Recibo de Listado Coches): 'listado-coches'
