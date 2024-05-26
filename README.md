@@ -17,5 +17,5 @@ It provides:
 
 
 CODE OF CONDUCT: 
-Proyecto-Alquiler' is a project of 2nd Degree in Computer Engineering developed in C++ code driven by the subject 'Proyectos de Programación' at CUNEF University and developed by a group of collaborators with the main goal of learning and the necessary knowledge driven by this subject. These collaborators are: Yago Lopez and Ignacio Bravo.
+- Proyecto-Alquiler' is a project of 2nd Degree in Computer Engineering developed in C++ code driven by the subject 'Proyectos de Programación' at CUNEF University and developed by a group of collaborators with the main goal of learning and the necessary knowledge driven by this subject. These collaborators are: Yago Lopez and Ignacio Bravo.
 
