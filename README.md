@@ -14,3 +14,6 @@ It provides:
 - Common use of exception, vectors & array functions
 - Tools for integrating C++ code
 - Useful functions of modular and efficient software integration
+
+
+#Code of Conduct
