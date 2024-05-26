@@ -50,7 +50,7 @@ string Dealership::showCar(Car* c) {
 
 bool Dealership::ifBuys(Administrator admin, int id) {
     int option;
-    cout << "\n Would you like to purchase any of the options?\n(1. Yes or 2. No): ";
+    cout << "\n Would you like to purchase any of the options?\nIntroduce 1 for YES or 2 for NO: "; 
     cin >> option;
     if (option != 1) return false;
     string email;
@@ -63,7 +63,7 @@ bool Dealership::ifBuys(Administrator admin, int id) {
 
 int Dealership::Menu() {
     int option;
-    cout << "\nChoose an action:: 1. View all available cars. 2. Filter the available cars according to certain attributes. 3. Generate a report of the purchased cars. 4. Exit---> ";
+    cout << "\nChoose an action::\n1. View all available cars.\n2. Filter the available cars according to certain attributes.\n3. Generate a report of the purchased cars.\n4. Exit---> ";
     cin >> option;
     return option;
 }
@@ -103,9 +103,8 @@ void Dealership::readCSV(string filename, int selection) {
             RegisteredCustomers.push_back(customer);
         }
     }
-
     file.close();
-    cout << "The data has been loaded correctly.\n";
+    cout << "The data file has been loaded successfully.\n";
 }
 
 /*

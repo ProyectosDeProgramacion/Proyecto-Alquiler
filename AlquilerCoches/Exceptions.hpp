@@ -8,7 +8,6 @@
 #include <exception>
 using namespace std;
 
-
 class ExceptionError : public exception { //Excepcion general
 public:
     ExceptionError(const char* message) : exception(message) {}

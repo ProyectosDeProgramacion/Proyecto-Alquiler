@@ -23,11 +23,13 @@ using namespace std;
 int main()
 {
 	Dealership dealership({}, {}, {});
-	Administrator admin("12344464D", 628893224, "proyectosprogramacion3@gmail.com", {});
+	Administrator admin("12344464D", 628893224, "proyectosprogra3@gmail.com", {});
 	Prediction prediction;
 	Report report;
 	try {
+		cout << "Loading the Car Dataset... \n"; 
 		dealership.readCSV("Coches_2ndaMano.csv", 0);
+		cout << "Loading the Customer Dataset... \n";
 		dealership.readCSV("Customers.txt", 1);
 		admin.Registered(dealership);
 		bool counter = true;

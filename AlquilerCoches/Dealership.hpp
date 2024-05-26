@@ -25,6 +25,7 @@ private:
     vector<Car*> AvailableCars;
     vector<Customer*> RegisteredCustomers;
     vector<Purchase*> Purchases;
+
 public:
     Dealership(vector<Car*> CochesDisponibles, vector<Customer*>ClientesRegistrados, vector<Purchase*> ComprasRealizadas);
     vector<Car*> getAvailableCars();

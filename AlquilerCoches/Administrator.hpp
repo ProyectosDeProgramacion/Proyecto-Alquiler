@@ -20,6 +20,7 @@ private:
 	int phoneNumber;
 	string Email;
 	vector<Customer*> CustomerList{};
+
 public:
 	Administrator(string ID, int PhoneNumber, string Email, vector<Customer*> CustomerList);
 	string getID();

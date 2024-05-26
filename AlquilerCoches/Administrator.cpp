@@ -55,7 +55,7 @@ void Administrator::logCustomer(Dealership dealership) {
 
 bool Administrator::Registered(Dealership dealership) {
     int option;
-    cout << "\nAlready registered? (1.Yes // 2.No):";
+    cout << "\nAlready registered?\nIntroduce 1 for YES or 2 for NO: ";
     cin >> option;
     if (option == 1) {
         string DNI, Pass;
