@@ -32,15 +32,12 @@ void Administrador::muestraClientes() {
     }
 }
 
-
 Cliente Administrador::buscaCliente(string Correo) {
     for (Cliente* c : listaClientes) {
         if (c->getCorreo() == Correo) return (*c);
     }
     cout << "No se ha encontrado al cliente buscado \n";
 }
-
-
 
 bool Administrador::iniciaSesion(Concesionario concesionario, string DNI, string Contrasena) {
     for (Cliente* i : concesionario.getClientesRegistrados()) {
