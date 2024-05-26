@@ -41,4 +41,4 @@ Small improvements or fixes are always appreciated. Thanks to GitHub we:
 
 Our preferred channels of communication are all public, but if you’d like to give any feedback to us in private first, contact our community coordinators at proyectosprogra3@gmail.com
 
-You are welcome to see our project!
+You are welcome to participate and discuss any ideas about our project!
