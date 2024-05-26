@@ -22,19 +22,15 @@ using namespace std;
 //ESTE!!!
 
 
-class Garaje {
-public:
-    vector<Coche*> CochesDisponibles;
-    Garaje(vector<Coche*> CochesDisponibles) : CochesDisponibles(CochesDisponibles) {}
-};
 
 int main()      // INLCUIR CLEAR LLAMANDO A SYSTEM()
 {
-    Concesionario concesionario({}, {});
+    Concesionario concesionario({}, {}, {});
     Administrador admin("12344464D", 628893224, "proyectosprogramacion3@gmail.com", {});
     try {
         concesionario.leerCSV("Coches_2ndaMano.csv", 0);
-        concesionario.leerCSV("", 1);
+        concesionario.leerCSV("Clientes.txt", 1);
+        bool sesionIniciada = false;
         admin.iniciaSesion(concesionario,"012883D", "jddd");
     }
     catch (exception& e) {

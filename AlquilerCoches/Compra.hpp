@@ -10,13 +10,15 @@ using namespace std;
 class Compra {
 private:
     string Coche;
-    string Matricula;
+    string Modelo;
     int FechaInicio;
     int FechaFin;
+    float Precio;
+    int idCoche;
     string DNICliente;
 
 public:
-    Compra(string Coche, string Modelo, int FechaInicio, int FechaFin, string DNICliente);
+    Compra(string Coche, string Modelo, int FechaInicio, int FechaFin, int idCoche ,string DNICliente);
     /*
     Compra(string Coche, string Matricula, int FechaInicio, int FechaFin, string DNICliente) :
         Coche(Coche), Matricula(Matricula), FechaInicio(FechaInicio), FechaFin(FechaFin), DNICliente(DNICliente) {}
@@ -25,6 +27,8 @@ public:
     string getModelo();
     int getFechaInicio();
     int getFechaFin();
+    float getPrecio();
+    int getIDCoche();
     string getDNICliente();
 };
 

@@ -27,6 +27,7 @@ public:
     vector<Compra*> getComprasRealizadas();
     void AnadirCompra(Compra *compra);
     Coche* buscaCoche(int id);
+    string muestraCoche(Coche* c);
     //Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
     void leerCSV(string filename, int seleccion);
 }; 

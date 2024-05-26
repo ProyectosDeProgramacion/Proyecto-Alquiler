@@ -3,6 +3,7 @@
 #include "Administrador.hpp"
 #include "Concesionario.hpp"
 #include <fstream>
+#include "Exceptions.hpp"
 
 Administrador::Administrador(string DNI, int Telefono, string Correo, vector<Cliente*> listaClientes) :
     DNI(DNI), Telefono(Telefono), Correo(Correo), listaClientes(listaClientes) {}

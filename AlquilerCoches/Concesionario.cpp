@@ -34,6 +34,12 @@ Coche *Concesionario::buscaCoche(int id) {
     }
 }
 
+string Concesionario::muestraCoche(Coche* c) {
+    string cadenaCoche = "";
+    cadenaCoche = c->getMarca() + "," + c->getmodelo() + "," + c->getTipoCombustible() + "," + to_string(c->getKilometros()) + "," + to_string(c->getPrecio()) + "," + c->getAnoFabricacion() + "," + to_string(c->getID());
+    return cadenaCoche;
+}
+
 
 //Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
 void Concesionario::leerCSV(string filename, int seleccion) {

@@ -4,6 +4,7 @@
 #include <string>
 #include "Cliente.hpp"
 #include "Concesionario.hpp"
+#include "Exceptions.hpp"
 using namespace std;
 
 #ifndef ADMINISTRADOR_HPP
