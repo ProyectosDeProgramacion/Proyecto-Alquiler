@@ -15,13 +15,13 @@ The main classes are:
 
 - Dealership ("Concesionario.cpp") - Shows the customers all the vehicles available at the dealership.
 
-In this repository we include all the main code with the whole branches which belongs to each module.
-
+In this repository we include all the main code separated & afterwards merged in the Main Branch with the whole branches which belongs to each module.
 - Main Branch: 'main'
+
+Furthermore, we have the following branches that correspond to the two modules of the project that have been mentioned throughout the 'Daily Scrums’: More info by going throught the README.md of each branch.
 - Module 1. Filtro Coches: 'filtro-coches'
 - Module 2. Listado Coches: 'listado-coches'
 
-Furthermore, we have the following branches that correspond to the two modules of the project that have been mentioned throughout the 'Daily Scrums’: More info by going throught the README.md of each branch.
 
 
 
