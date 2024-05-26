@@ -22,9 +22,6 @@ Furthermore, we have the following branches that correspond to the two modules o
 - Module 1. Cars Filter Prediction (Predicción de Filtro Coches): 'filtro-coches'
 - Module 2. Cars List Receipt (Recibo de Listado Coches): 'listado-coches'
 
-
-
-
 It provides:
 
 - Complexity of vectors joined between classes
@@ -35,7 +32,9 @@ It provides:
 - Tools for integrating C++ code
 - Useful functions of modular and efficient software integration
 
-
 Code of Conduct: 
 - 'Proyecto-Alquiler' is a project of 2nd Degree in Computer Engineering developed in C++ code driven by the subject 'Proyectos de Programación' at CUNEF University and developed by a group of collaborators with the main goal of learning and the necessary knowledge driven by this subject. These collaborators are: Yago Lopez and Ignacio Bravo.
 
+Small improvements or fixes are always appreciated. Thanks to GitHub we:
+- Review pull requests
+- Help us stay on top of new and old issues
