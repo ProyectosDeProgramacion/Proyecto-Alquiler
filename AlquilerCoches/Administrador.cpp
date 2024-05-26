@@ -3,6 +3,7 @@
 #include "Administrador.hpp"
 #include "Concesionario.hpp"
 #include <fstream>
+#include "Exceptions.hpp"
 
 Administrador::Administrador(string DNI, int Telefono, string Correo, vector<Cliente*> listaClientes) :
     DNI(DNI), Telefono(Telefono), Correo(Correo), listaClientes(listaClientes) {}
@@ -32,11 +33,33 @@ void Administrador::muestraClientes() {
     }
 }
 
+
 Cliente Administrador::buscaCliente(string Correo) {
     for (Cliente* c : listaClientes) {
         if (c->getCorreo() == Correo) return (*c);
     }
     cout << "No se ha encontrado al cliente buscado \n";
+}
+
+
+
+bool Administrador::siRegistrado(Concesionario concesionario) {
+    int opcion;
+    cout << "\nEstas ya registrado?\n(1.SI\n2.NO):";
+    cin >> opcion;
+    if (opcion == 1) {
+        string DNI;
+        string Contrasena;
+        cout << "\nIntroduce tu DNI: ";
+        cin >> DNI;
+        cout << "\nIntroduce tu contrasena: ";
+        cin >> Contrasena;
+        iniciaSesion(concesionario, DNI, Contrasena);
+    }
+    else {
+        registraCliente(concesionario);
+    }
+    return true;
 }
 
 bool Administrador::iniciaSesion(Concesionario concesionario, string DNI, string Contrasena) {
