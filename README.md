@@ -1,21 +1,25 @@
 # Proyecto-Alquiler: This project consists of a car program rental design.
 We have several sections and classes that play a unique role for each part that makes up the project. 
 The main classes are: 
-- Administrator ("Administrador.cpp") - Manages the purchases of users who wish to rent a car regarding garage, which accesses the vehicles owned by the dealership. 
+- Administrator ("Administrator.cpp") - Manages the purchases of users who wish to rent a car regarding garage, which accesses the vehicles owned by the dealership. 
 
-- Car ("Coche.cpp") - Mentions all the details of all the cars of the dealership, thus showing, brand, series, year of manufacture, price, reliability and state of readiness, which will show whether it is available for rent or not.
+- Car ("Car.cpp") - Mentions all the details of all the cars of the dealership, thus showing, brand, series, year of manufacture, price, reliability and state of readiness, which will show whether it is available for rent or not.
 
-- Purchase ("Compra.cpp") - Identifies and accesses the customer's data once they make the purchase of the rental. They have a start date and an end date for how long they wish to have the vehicle.
+- Purchase ("Purchase.cpp") - Identifies and accesses the customer's data once they make the purchase of the rental. They have a start date and an end date for how long they wish to have the vehicle.
 
-- Customer ("Cliente.cpp") - Accesses the data of each customer, once registered, it is saved in the program's database. Thus, it also has the option to display the list of cars that the customer rents through a "cart" vector. 
+- Customer ("Customer.cpp") - Accesses the data of each customer, once registered, it is saved in the program's database. Thus, it also has the option to display the list of cars that the customer rents through a "cart" vector. 
 
-- CarRental ("AlquilerCoches.cpp") - It is the main class of the program which all classes depend on this one, and this one is connected to all of them.
+- CarRental ("CarRental.cpp") - It is the main class of the program which all classes depend on this one, and this one is connected to all of them.
 
 - Exceptions ("Exceptions.hpp") - Generates exceptions if any unexpected action occurs during the program.
 
-- Dealership ("Concesionario.cpp") - Shows the customers all the vehicles available at the dealership.
+- Dealership ("Dealership.cpp") - Shows the customers all the vehicles available at the dealership.
 
-In this repository we include all the main code separated by each branch which belongs to each module & afterwards merged in the Main Branch.
+In this repository we include all the main code separated by each branch which belongs to each module, & then, afterwards we merge in the Main Branch.
+- Prediction ("Prediction.cpp") - Module 1.
+- Report ("Report.cpp") - Module 2.
+
+All cpp files mentioned BEFORE, are on the: 
 - Main Branch: 'main'
 
 Furthermore, we have the following branches that correspond to the two modules of the project that have been mentioned throughout the 'Daily Scrums’: More info by going throught the README.md of each branch.
