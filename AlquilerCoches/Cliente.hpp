@@ -1,4 +1,8 @@
 // (.hpp) CLIENTE
+#pragma once
+
+#ifndef CLIENTE_HPP
+#define CLIENTE_HPP
 
 #include <iostream>
 #include <string>
@@ -6,19 +10,18 @@
 #include "Coche.hpp"
 using namespace std;
 
-#ifndef CLIENTE_HPP
-#define CLIENTE_HPP
 
-class Cliente {
+
+class Customer {
 private:
     string DNI;
     int Telefono;
     string Correo;
     string Contrasena;
-    vector<Coche*> Carrito;
+    vector<Car*> Carrito;
 
 public:
-    Cliente(string DNI, int Telefono, string Correo, string Contrasena, vector<Coche*> Carrito);
+    Customer(string DNI, int Telefono, string Correo, string Contrasena, vector<Car*> Carrito);
     /*
     Cliente(string DNI, int Telefono, string Correo, vector<Coche*> Carrito) :
         DNI(DNI), Telefono(Telefono), Correo(Correo), Carrito(Carrito) {}
@@ -31,7 +34,9 @@ public:
     void generaInforme(string filename);
     void guardaDatos(string filename);
     void muestraClientes(string filename);
+    void anadirCarrito(Car* coche);
     // bool iniciarSesion();
 };
 
 #endif
+

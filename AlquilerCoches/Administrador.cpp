@@ -1,23 +1,24 @@
 // (.cpp) ADMINISTRADOR
 
 #include "Administrador.hpp"
-#include "Concesionario.hpp"
 #include <fstream>
-#include "Exceptions.hpp"
+#include "Cliente.hpp"
+#include "Compra.hpp"
+#include "Concesionario.hpp"
 
-Administrador::Administrador(string DNI, int Telefono, string Correo, vector<Cliente*> listaClientes) :
-    DNI(DNI), Telefono(Telefono), Correo(Correo), listaClientes(listaClientes) {}
+Administrator::Administrator(string ID, int phoneNumber, string Email, vector<Customer*> CustomerList) :
+    ID(ID), phoneNumber(phoneNumber), Email(Email), CustomerList(CustomerList) {}
 
-string Administrador::getDNI() {
-    return this->DNI;
+string Administrator::getID() {
+    return this->ID;
 }
 
-int Administrador::getTelefono() {
-    return this->Telefono;
+int Administrator::getphoneNumber() {
+    return this->phoneNumber;
 }
 
-string Administrador::getCorreo() {
-    return this->Correo;
+string Administrator::getEmail() {
+    return this->Email;
 }
 
 /*
@@ -26,46 +27,65 @@ int Administrador::getnClientes() {
 }
 */
 
-void Administrador::muestraClientes() {
+void Administrator::showCustomers() {
     cout << "Se muestran a continuacion los correos de los clientes: \n";
-    for (Cliente* c : listaClientes) {
+    for (Customer* c : CustomerList) {
         cout << c->getCorreo() << endl;
     }
 }
 
 
-Cliente Administrador::buscaCliente(string Correo) {
-    for (Cliente* c : listaClientes) {
-        if (c->getCorreo() == Correo) return (*c);
+Customer* Administrator::searchCustomers(string Email) {
+    for (Customer* c : CustomerList) {
+        if (c->getCorreo() == Email) return c;
     }
     cout << "No se ha encontrado al cliente buscado \n";
+    return nullptr;
 }
 
 
+void Administrator::logCustomer(Dealership concesionario) {
+    string ID, Email, Password;
+    int phoneNumber;
+    cout << "\nIntroduce tu DNI: ";
+    cin >> ID;
+    cout << "\n Introduce tu Telefono: ";
+    cin >> phoneNumber;
+    cout << "<<\nIntroduce tu Correo: ";
+    cin >> Email;
+    cout << "\nIntroduce tu contrasena: ";
+    cin >> Password;
+    Customer* customer = new Customer(ID, phoneNumber, Email, Password, {});
+    concesionario.anadirCliente(customer);
+    CustomerList.push_back(customer);
+    customer->guardaDatos("Clientes.txt");
+}
 
-bool Administrador::siRegistrado(Concesionario concesionario) {
+
+bool Administrator::Registered(Dealership dealership) {
     int opcion;
     cout << "\nEstas ya registrado?\n(1.SI\n2.NO):";
     cin >> opcion;
     if (opcion == 1) {
         string DNI;
-        string Contrasena;
+        string Pass;
         cout << "\nIntroduce tu DNI: ";
         cin >> DNI;
         cout << "\nIntroduce tu contrasena: ";
-        cin >> Contrasena;
-        iniciaSesion(concesionario, DNI, Contrasena);
+        cin >> Pass;
+        logIn(dealership, DNI, Pass);
     }
     else {
-        registraCliente(concesionario);
+        logCustomer(dealership);
     }
     return true;
 }
 
-bool Administrador::iniciaSesion(Concesionario concesionario, string DNI, string Contrasena) {
-    for (Cliente* i : concesionario.getClientesRegistrados()) {
-        if (i->getDNI() == DNI && i->getContrasena() == Contrasena) return true;
+bool Administrator::logIn(Dealership dealership, string ID, string Password) {
+    for (Customer* i : dealership.getClientesRegistrados()) {
+        if (i->getDNI() == ID && i->getContrasena() == Password) return true;
     }
-    return false;                           // ¡¡¡CAMBIAR A: --> throw ExceptionInicioSesion(); !!!
+    throw ExceptionInicioSesion();
 }
-//Comentario 1
+
+

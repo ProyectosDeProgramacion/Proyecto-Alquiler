@@ -2,25 +2,36 @@
 
 #include "Compra.hpp"
 
-Compra::Compra(string Coche, string Matricula, int FechaInicio, int FechaFin, string DNICliente) :
-    Coche(Coche), Matricula(Matricula), FechaInicio(FechaInicio), FechaFin(FechaFin), DNICliente(DNICliente) {}
 
-string Compra::getCoche() {
+Purchase::Purchase(string Coche, string Modelo, int FechaInicio, int FechaFin, int idCoche, string DNICliente) :
+    Coche(Coche), Precio(Precio), FechaInicio(FechaInicio), FechaFin(FechaFin), DNICliente(DNICliente) {}
+
+string Purchase::getCoche() {
     return this->Coche;
 }
 
-string Compra::getMatricula() {
-    return this->Matricula;
+string Purchase::getModelo() {
+    return this->Modelo;
 }
 
-int Compra::getFechaInicio() {
+int Purchase::getFechaInicio() {
     return this->FechaInicio;
 }
 
-int Compra::getFechaFin() {
+int Purchase::getFechaFin() {
     return this->FechaFin;
 }
 
-string Compra::getDNICliente() {
+float Purchase::getPrecio() {
+    return this->Precio;
+}
+
+int Purchase::getIDCoche() {
+    return this->idCoche;
+}
+
+string Purchase::getIDCustomer() {
     return this->DNICliente;
 }
+
+

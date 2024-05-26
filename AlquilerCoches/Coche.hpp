@@ -1,13 +1,18 @@
 // (.hpp) COCHE
 
-#include <iostream>
-#include <string>
-using namespace std;
+
+#pragma once
 
 #ifndef COCHE_HPP
 #define COCHE_HPP
 
-class Coche {
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+
+class Car {
 private:
     string Marca;
     string Modelo;
@@ -17,9 +22,10 @@ private:
     string Fiabilidad;
     int Kilometros;
     int Estado;
+    int id;
     //list<Coche> listaCoches {};
 public:
-    Coche(string Marca, string Modelo, float Precio, string TipoCombustible, string anoFabricacion, int Kilometros, int Estado);
+    Car(string Marca, string Modelo, float Precio, string TipoCombustible, string anoFabricacion, int Kilometros, int Estado, int id);
     /*
     Coche(string Marca, string Modelo, float Precio, string TipoCombustible, string anoFabricacion, int Kilometros, int Estado) :
         Marca(Marca), Modelo(Modelo), Precio(Precio), TipoCombustible(TipoCombustible), AnoFabricacion(anoFabricacion),
@@ -34,6 +40,7 @@ public:
     // string getFiabilidad()
     int getKilometros();
     int getEstado();
+    int getID();
     // void getListaCoches();
 
     // Coche(string Marca, string Matricula, string Modelo, float Precio, string TipoCombustible, Fecha anoFabricacion, string Fiabilidad, int Kilometros, int Estado, list<Coche> Coches) : 
@@ -42,3 +49,5 @@ public:
 };
 
 #endif
+
+

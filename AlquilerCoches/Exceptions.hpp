@@ -1,11 +1,15 @@
 // (.hpp) EXCEPTIONS
 
-#include <stdexcept>
-#include <exception>
-using namespace std; 
+#pragma once
+
 
 #ifndef EXCEPTIONS_HPP
 #define EXCEPTIONS_HPP
+
+#include <stdexcept>
+#include <exception>
+using namespace std;
+
 
 class ExceptionError : public exception { //Excepcion general
 public:
@@ -23,7 +27,10 @@ public:
 };
 
 class ExceptionInicioSesion : public ExceptionError {
+public:
     ExceptionInicioSesion() : ExceptionError("Error en el usuario o contrasena impuestos") {}
 };
 
+
 #endif // !EXCEPTIONS_HPP
+

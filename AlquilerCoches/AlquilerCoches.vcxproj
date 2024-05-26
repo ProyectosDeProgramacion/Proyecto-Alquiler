@@ -133,6 +133,8 @@
     <ClCompile Include="Coche.cpp" />
     <ClCompile Include="Compra.cpp" />
     <ClCompile Include="Concesionario.cpp" />
+    <ClCompile Include="Prediction.cpp" />
+    <ClCompile Include="Report.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Administrador.hpp" />
@@ -141,6 +143,8 @@
     <ClInclude Include="Compra.hpp" />
     <ClInclude Include="Concesionario.hpp" />
     <ClInclude Include="Exceptions.hpp" />
+    <ClInclude Include="Prediction.hpp" />
+    <ClInclude Include="Report.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

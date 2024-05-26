@@ -1,31 +1,41 @@
 // (.hpp) COMPRA
 
-#include <iostream>
-#include <string>
-using namespace std;
+#pragma once
+
 
 #ifndef COMPRA_HPP
 #define COMPRA_HPP
 
-class Compra {
+
+#include <iostream>
+#include <string>
+#include "Coche.hpp"
+using namespace std;
+
+class Purchase {
 private:
     string Coche;
-    string Matricula;
+    string Modelo;
     int FechaInicio;
     int FechaFin;
+    float Precio;
+    int idCoche;
     string DNICliente;
 
 public:
-    Compra(string Coche, string Matricula, int FechaInicio, int FechaFin, string DNICliente);
+    Purchase(string Coche, string Modelo, int FechaInicio, int FechaFin, int idCoche, string DNICliente);
     /*
     Compra(string Coche, string Matricula, int FechaInicio, int FechaFin, string DNICliente) :
         Coche(Coche), Matricula(Matricula), FechaInicio(FechaInicio), FechaFin(FechaFin), DNICliente(DNICliente) {}
     */
     string getCoche();
-    string getMatricula();
+    string getModelo();
     int getFechaInicio();
     int getFechaFin();
-    string getDNICliente();
+    float getPrecio();
+    int getIDCoche();
+    string getIDCustomer();
 };
 
 #endif
+
