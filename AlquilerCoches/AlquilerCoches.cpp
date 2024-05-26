@@ -32,6 +32,10 @@ int main()      // INLCUIR CLEAR LLAMANDO A SYSTEM()
         concesionario.leerCSV("Clientes.txt", 1);
         admin.siRegistrado(concesionario);
 
+
+
+
+
     }
     catch (exception& e) {
         cout << e.what();
