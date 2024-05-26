@@ -9,7 +9,7 @@ The main classes are:
 
 - Customer ("Customer.cpp") - Accesses the data of each customer, once registered, it is saved in the program's database. Thus, it also has the option to display the list of cars that the customer rents through a "cart" vector. 
 
-- CarRental ("CarRental.cpp") - It is the main class of the program which all classes depend on this one, and this one is connected to all of them.
+- CarRental ("CarRental.cpp") - It is the main class of the program which all classes depend on this one, and this one is connected to all of them. Once the user compiles, the programe will automatically generate a 'Costumers.txt' file which means it runs successfully and the program can be used properly. 
 
 - Exceptions ("Exceptions.hpp") - Generates exceptions if any unexpected action occurs during the program.
 
@@ -21,6 +21,8 @@ In this repository we include all the main code separated by each branch which b
 
 All cpp files mentioned BEFORE, are on the: 
 - Main Branch: 'main'
+
+Once the user compiles the programe, it automaticly will generate a 
 
 Furthermore, we have the following branches that correspond to the two modules of the project that have been mentioned throughout the 'Daily Scrums’: More info by going throught the README.md of each branch.
 - Module 1. Cars Filter Prediction (Predicción de Filtro Coches): 'filtro-coches'
