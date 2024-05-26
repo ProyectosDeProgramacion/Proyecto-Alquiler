@@ -1,5 +1,6 @@
 # Proyecto-Alquiler: This project consists of a car rental design and program, which will be discussed in more detail below.
-We have several sections and classes that play a unique role for each part that makes up the project. The main classes are: 
+We have several sections and classes that play a unique role for each part that makes up the project. 
+The main classes are: 
 - Administrator ("Administrador.cpp") - Manages the purchases of users who wish to rent a car regarding garage, which accesses the vehicles owned by the dealership. 
 
 - Car ("Coche.cpp") - Mentions all the details of all the cars of the dealership, thus showing, brand, series, year of manufacture, price, reliability and state of readiness, which will show whether it is available for rent or not.
