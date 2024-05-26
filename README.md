@@ -1,18 +1,18 @@
 # Proyecto-Alquiler: This project consists of a car rental design and program, which will be discussed in more detail below.
 We have several sections and classes that play a unique role for each part that makes up the project. The main classes are: 
-- Administrator - Manages the purchases of users who wish to rent a car regarding garage, which accesses the vehicles owned by the dealership. 
+- Administrator ("Administrador.cpp") - Manages the purchases of users who wish to rent a car regarding garage, which accesses the vehicles owned by the dealership. 
 
-- Car - Mentions all the details of all the cars of the dealership, thus showing, brand, series, year of manufacture, price, reliability and state of readiness, which will show whether it is available for rent or not.
+- Car ("Coche.cpp") - Mentions all the details of all the cars of the dealership, thus showing, brand, series, year of manufacture, price, reliability and state of readiness, which will show whether it is available for rent or not.
 
-- Purchase - Identifies and accesses the customer's data once they make the purchase of the rental. They have a start date and an end date for how long they wish to have the vehicle.
+- Purchase ("Compra.cpp") - Identifies and accesses the customer's data once they make the purchase of the rental. They have a start date and an end date for how long they wish to have the vehicle.
 
-- Customer - Accesses the data of each customer, once registered, it is saved in the program's database. Thus, it also has the option to display the list of cars that the customer rents through a "cart" vector. 
+- Customer ("Cliente.cpp") - Accesses the data of each customer, once registered, it is saved in the program's database. Thus, it also has the option to display the list of cars that the customer rents through a "cart" vector. 
 
-- CarRental - It is the main class of the program which all classes depend on this one, and this one is connected to all of them.
+- CarRental ("AlquilerCoches.cpp") - It is the main class of the program which all classes depend on this one, and this one is connected to all of them.
 
-- Exceptions - Generates exceptions if any unexpected action occurs during the program.
+- Exceptions ("Exceptions.hpp") - Generates exceptions if any unexpected action occurs during the program.
 
-- Dealership - Shows the customers all the vehicles available at the dealership.
+- Dealership ("Concesionario.cpp") - Shows the customers all the vehicles available at the dealership.
 
 In this repository we include all the main code with the whole branches which belongs to each module.
 
