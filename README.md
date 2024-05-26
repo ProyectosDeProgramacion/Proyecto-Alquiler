@@ -16,9 +16,9 @@ We have several sections and classes that play a unique role for each part that 
 
 In this repository we include all the main code with the whole branches which belongs to each module.
 
-- Main Branch: AlquilerCoches
-- Filtro-Coches: filtro-coches
-- Listado-Coches: listado-coches
+- Main Branch: 'main'
+- Module 1. Filtro Coches: 'filtro-coches'
+- Module 2. Listado Coches: 'listado-coches'
 
 It provides:
 
