@@ -21,6 +21,10 @@ In this repository we include all the main code with the whole branches which be
 - Module 1. Filtro Coches: 'filtro-coches'
 - Module 2. Listado Coches: 'listado-coches'
 
+Furthermore, we have the following branches that correspond to the two modules of the project that have been mentioned throughout the 'Daily Scrums’: More info by going throught the README.md of each branch.
+
+
+
 It provides:
 
 - Complexity of vectors joined between classes
