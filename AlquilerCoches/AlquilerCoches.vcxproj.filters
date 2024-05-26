@@ -33,7 +33,7 @@
     <ClCompile Include="Concesionario.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Informe.cpp">
+    <ClCompile Include="Report.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

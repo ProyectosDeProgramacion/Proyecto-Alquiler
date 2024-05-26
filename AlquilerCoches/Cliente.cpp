@@ -44,11 +44,11 @@ void Cliente::guardaDatos(string filename) { // Excepción de escritura
     cin >> this->DNI;
     cout << "Introduce el correo: \n";
     cin >> this->Correo;
-    cout << "Introduce el telefono: \n";
-    cin >> this->Telefono;
+    cout << "Introduce la contrasena: \n";
+    cin >> this->Contrasena;
     if (!archivo.is_open()) {
         // throw ExceptionEscrituraArchivo();
-        archivo << endl << "{DNI},{Correo},{Telefono}";
+        archivo << endl << ","+this->DNI << "," + this->Correo << "," + this->Contrasena << "\n";
     }
 }
 

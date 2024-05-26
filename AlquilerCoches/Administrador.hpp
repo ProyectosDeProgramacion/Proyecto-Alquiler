@@ -29,6 +29,8 @@ public:
     // int getnClientes();
     void muestraClientes();
     Cliente buscaCliente(string Correo); //REVISAR!!
+    void registraCliente(Concesionario concesionario);
+    bool siRegistrado(Concesionario concesionario);
     bool iniciaSesion(Concesionario concesionario, string DNI, string Contrasena);
 };
 

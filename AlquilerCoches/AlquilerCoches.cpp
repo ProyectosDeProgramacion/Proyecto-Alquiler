@@ -30,8 +30,8 @@ int main()      // INLCUIR CLEAR LLAMANDO A SYSTEM()
     try {
         concesionario.leerCSV("Coches_2ndaMano.csv", 0);
         concesionario.leerCSV("Clientes.txt", 1);
-        bool sesionIniciada = false;
-        admin.iniciaSesion(concesionario,"012883D", "jddd");
+        admin.siRegistrado(concesionario);
+
     }
     catch (exception& e) {
         cout << e.what();

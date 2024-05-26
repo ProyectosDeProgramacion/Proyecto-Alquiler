@@ -28,6 +28,14 @@ void Concesionario::AnadirCompra(Compra *compra){
 
 }
 
+void Concesionario::anadirCliente(Cliente* cliente){
+
+    ClientesRegistrados.push_back(cliente);
+    cout << "\nsSe ha anadido correctamente al cliente\n";
+
+}
+
+
 Coche *Concesionario::buscaCoche(int id) {
     for (Coche* c : getCochesDisponibles()) {
         if(c->getID() == id) return c;

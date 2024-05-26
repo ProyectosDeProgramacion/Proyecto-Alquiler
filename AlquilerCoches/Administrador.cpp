@@ -41,7 +41,41 @@ Cliente Administrador::buscaCliente(string Correo) {
     cout << "No se ha encontrado al cliente buscado \n";
 }
 
+void Administrador::registraCliente(Concesionario concesionario) {
+    string DNI, Correo, Contrasena;
+    int Telefono;
+    cout << "\nIntroduce tu DNI: ";
+    cin >> DNI;
+    cout << "\n Introduce tu Telefono: ";
+    cin >> Telefono;
+    cout << "<<\nIntroduce tu Correo: ";
+    cin >> Correo;
+    cout << "\nIntroduce tu contrasena: ";
+    cin >> Contrasena;
+    Cliente *cliente = new Cliente(DNI, Telefono, Correo, Contrasena,{});
+    concesionario.anadirCliente(cliente);
+    listaClientes.push_back(cliente);
+}
 
+
+bool Administrador::siRegistrado(Concesionario concesionario) {
+    int opcion;
+    cout << "\nEstas ya registrado?\n(1.SI\n2.NO):";
+    cin >> opcion;
+    if (opcion == 1) {
+        string DNI;
+        string Contrasena;
+        cout << "\nIntroduce tu DNI: ";
+        cin >> DNI;
+        cout << "\nIntroduce tu contrasena: ";
+        cin >> Contrasena;
+        iniciaSesion(concesionario, DNI, Contrasena);
+    }
+    else {
+        registraCliente(concesionario);
+    }
+    return true;
+}
 
 bool Administrador::iniciaSesion(Concesionario concesionario, string DNI, string Contrasena) {
     for (Cliente* i : concesionario.getClientesRegistrados()) {
