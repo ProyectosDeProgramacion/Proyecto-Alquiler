@@ -1,6 +1,6 @@
-// AlquilerCoches.cpp : Realizado por: Ignacio Bravo y Yago López.
+// AlquilerCoches.cpp - Made by: Ignacio Bravo y Yago López.
 
-// #include <memory>
+// All the includes of the files that correspond to the main class, which is this one, are put together.
 #include <iostream>
 #include <fstream>
 #include <list>
@@ -18,8 +18,6 @@
 #include "Report.hpp"
 using namespace std;
 
-//Seguimos el progreso en la rama main del programa
-
 int main()
 {
 	Dealership dealership({}, {}, {});
@@ -27,9 +25,9 @@ int main()
 	Prediction prediction;
 	Report report;
 	try {
-		cout << "Loading the Car Dataset... \n"; 
+		cout << "Loading the Car Dataset... \n"; // Upload the CSV to the program.
 		dealership.readCSV("Coches_2ndaMano.csv", 0);
-		cout << "Loading the Customer Dataset... \n";
+		cout << "Loading the Customer Dataset... \n"; // Upload the customer txt to the program only when they are logged.
 		dealership.readCSV("Customers.txt", 1);
 		admin.Registered(dealership);
 		bool counter = true;
@@ -47,10 +45,10 @@ int main()
 				int id;
 				cout << "\nEnter the ID of the car you want to buy:\n--> ";
 				cin >> id;
+				// This action is commented as an afterthought, but does not influence the program.
+				// dealership.ifPurchases(deleader, admin, id);
 
-				//concesionario.siCompra(concesionario, admin, id);
-
-				//if (!haComprado) {
+				//if (!heBuys) {
 					cout << "\n What other action do you wish to take?\n";
 				//}
 				break;
