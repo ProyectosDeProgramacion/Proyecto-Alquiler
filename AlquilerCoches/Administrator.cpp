@@ -34,7 +34,7 @@ Customer* Administrator::searchCustomers(string Email) {
         if (c->getEmail() == Email) return c;
     }
     cout << "Customer not found. \n";
-    return nullptr;
+    return nullptr; // We return an empty pointer in case no customer is found.
 }
 
 void Administrator::logCustomer(Dealership dealership) {

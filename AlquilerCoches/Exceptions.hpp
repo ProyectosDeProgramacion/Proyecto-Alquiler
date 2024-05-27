@@ -8,7 +8,7 @@
 #include <exception>
 using namespace std;
 
-class ExceptionError : public exception { // General exception.
+class ExceptionError : public exception { // General exception error wich is an extention of the included exception module from C++.
 public:
     ExceptionError(const char* message) : exception(message) {}
 };

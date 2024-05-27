@@ -37,7 +37,7 @@ public:
     string showCar(Car* c);
     bool ifBuys(Administrator admin, int id);
     int Menu();
-    //Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
+    // Read the CSV file and load the cars in a dynamic list of pointers.
     void readCSV(string filename, int selection);
 };
 

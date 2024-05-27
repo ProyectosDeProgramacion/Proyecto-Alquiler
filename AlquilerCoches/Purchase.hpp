@@ -10,7 +10,7 @@
 #include "Car.hpp" // It is necessary for you to access the methods of the car class.
 using namespace std;
 
-class Purchase {
+class Purchase { 
 private:
     string Car;
     string Model;
@@ -19,8 +19,9 @@ private:
     int CarID;
     string CustomerID;
 
-// Purchase data.
+// Purchase attributes.
 public:
+    // Purchase methods.
     Purchase(string Car, string Model, int Date, int CarID, string CustomerID);
     string getCar();
     string getModel();

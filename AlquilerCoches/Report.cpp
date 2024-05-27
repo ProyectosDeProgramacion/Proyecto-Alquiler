@@ -1,4 +1,4 @@
-// (.Cpp) REPORT
+// (.Cpp) REPORT- Module 2: Made by Ignacio Bravo.
 
 #include "Car.hpp"
 #include "Exceptions.hpp"
@@ -6,7 +6,8 @@
 #include "Dealership.hpp"
 #include "Report.hpp"
 #include <fstream>
-//saves enough data to recognize an old customer again. If you want to reconnect, you can log in since you have your data saved in a Customers.txt file.
+// Saves enough data to recognize an old customer again. 
+// If you want to enter the program again, you only have to log in, since the data is saved in Customers.txt.
 void Report::PurchaseReport(Dealership dealership, string filename) {
 	ofstream file(filename);
 	if (!file.is_open()) throw ExceptionWritingFile();

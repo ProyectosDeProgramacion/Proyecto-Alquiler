@@ -3,9 +3,10 @@
 #include "Dealership.hpp"
 #include "Exceptions.hpp"
 #include "Administrator.hpp"
+#include <iostream>
 #include <sstream>
 
-
+// Contains cars, customers and purchases.
 Dealership::Dealership(vector<Car*> AvailableCars, vector<Customer*>RegisteredCostumers, vector<Purchase*> Purchases) :
     AvailableCars(AvailableCars), RegisteredCustomers(RegisteredCostumers), Purchases(Purchases) {}
 
@@ -68,7 +69,7 @@ int Dealership::Menu() {
     return option;
 }
 
-//Funcion cargaDatos: leer el archivo CSV y cargar los coches en una lista dinámica de punteros
+// Read the CSV file and load the cars in a dynamic list of pointers.
 void Dealership::readCSV(string filename, int selection) {
     ifstream file(filename);
     if (!file.is_open()) {
@@ -76,7 +77,8 @@ void Dealership::readCSV(string filename, int selection) {
     }
 
     string line;
-    getline(file, line); // Ignorar la primera línea del archivo
+    // Ignore the first line of the file in order not to read the first line of the CSV since it refers to the Dataset titles.
+    getline(file, line); 
     int estatus = AVAILABLE;
     int id = 0;
 
@@ -85,20 +87,20 @@ void Dealership::readCSV(string filename, int selection) {
         string token;
         vector<string> tokens;
 
-        // Separar el texto del CSV por comas
+        // Separate CSV text by commas.
         while (getline(ss, token, ',')) {
             tokens.push_back(token);
         }
 
         if (selection == CAR) {
-            if (tokens.size() < 10) continue; // Asegurarse de que hay suficientes tokens
+            if (tokens.size() < 10) continue; // Ensure that there are sufficient tokens.
             if (tokens[5] == "-1") estatus = RENTED;
             Car* coche = new Car(tokens[2], tokens[4], stof(tokens[5]), tokens[7], tokens[8], stoi(tokens[9]), estatus, id);
             AvailableCars.push_back(coche);
             id++;
         }
         else if (selection == CUSTOMER) {
-            if (tokens.size() < 4) continue; // Asegurarse de que hay suficientes tokens
+            if (tokens.size() < 4) continue; // Ensure that there are sufficient tokens.
             Customer* customer = new Customer(tokens[0], stoi(tokens[1]), tokens[2], tokens[3], {});
             RegisteredCustomers.push_back(customer);
         }
@@ -106,12 +108,3 @@ void Dealership::readCSV(string filename, int selection) {
     file.close();
     cout << "The data file has been loaded successfully.\n";
 }
-
-/*
-bool Dealership::logIn( string ID, string Password) {
-    for (Customer* i : this->getClientesRegistrados()) {
-        if (i->getDNI() == ID && i->getContrasena() == Password) return true;
-    }
-    throw ExceptionInicioSesion();
-}
-*/

@@ -1,6 +1,6 @@
 // (.hpp) PREDICTION - Module 1: Made by Yago López.
 
-#pragma once
+#pragma once // Charges only once.
 #ifndef PREDICTION_HPP
 #define PREDICTION_HPP
 // The classes necessary for the operation of this branch are accessed.

@@ -33,32 +33,32 @@ int main()
 		bool counter = true;
 		while (counter) {
 			switch (dealership.Menu()) {
-			case 1:
+			case 1: // Dealership Cars of the CSV.
 				for (Car* coche : dealership.getAvailableCars()) {
 					dealership.showCar(coche);
 				}
 				cout << "\n----- END OF THE LIST ------\n";
 				break;
 
-			case 2:
+			case 2: // Filter the available cars according to certain attributes.
 				prediction.main();
 				int id;
 				cout << "\nEnter the ID of the car you want to buy:\n--> ";
 				cin >> id;
 				// This action is commented as an afterthought, but does not influence the program.
-				// dealership.ifPurchases(deleader, admin, id);
 
-				//if (!heBuys) {
+				if (!dealership.ifBuys(admin, id)) {
 					cout << "\n What other action do you wish to take?\n";
-				//}
+					continue; 
+				}
 				break;
 
-			case 3:
+			case 3: // Generate a report of the purchased cars.ç
 				report.PurchaseReport(dealership, "Purchases.txt");
 				cout << "\nThe report has been successfully completed!\n";
 				break;
 
-			case 5:
+			case 4: // Exit.
 				cout << "\nLeaving...\n";
 				counter = false;
 			default:
@@ -66,8 +66,8 @@ int main()
 			}
 		}
 	}
-	catch (exception& e) {
-		cout << e.what();
+	catch (exception& e) { 
+		cout << e.what(); // This function returns the error message according to the catch.
 	}
 	return 0;
 }
