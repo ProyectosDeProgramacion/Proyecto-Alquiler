@@ -7,8 +7,7 @@ The main classes are:
 
 - Purchase ("Purchase.cpp") - Identifies and accesses the customer's data once they make the purchase of the rental. They have a start date and an end date for how long they wish to have the vehicle.
 
-- Customer ("Customer.cpp") - Accesses the data of each customer, once registered, it is saved in the program's database. Thus, it also has the option to display the list of cars that the customer rents through a "cart" vector. 
-
+- Customer ("Customer.cpp") - Accesses the data of each customer, once registered, it is saved in the program's database. Thus, it also has the option to display the list of cars that the customer rents through a "cart" vector. The customer only makes lease purchases of any car that is available at the dealership.
 - CarRental ("CarRental.cpp") - It is the main class of the program which all classes depend on this one, and this one is connected to all of them. Once the user compiles, the programe will automatically generate a 'Costumers.txt' file which means it runs successfully and the program can be used properly. 
 
 - Exceptions ("Exceptions.hpp") - Generates exceptions if any unexpected action occurs during the program.
