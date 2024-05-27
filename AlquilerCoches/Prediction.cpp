@@ -1,4 +1,4 @@
-// (.cpp) PREDICTION: Module 1. by Yago López
+// (.cpp) PREDICTION - Module 1: Made by Yago López.
 
 #include "Dealership.hpp"
 #include "Car.hpp"
