@@ -1,9 +1,11 @@
 // (.hpp) ADMINISTRATOR
 
+// Definition the hpp file for the operation of the program.
 #pragma once
 #ifndef ADMINISTRATOR_HPP
 #define ADMINISTRATOR_HPP
 
+// All files that include this class are included.
 #include <iostream>
 #include <string>
 #include "Customer.hpp"
@@ -11,9 +13,10 @@
 #include "Dealership.hpp"
 using namespace std;
 
-// Definicion de mentira
+// Liar definition.
 class Dealership;
 
+// Definition of this class.
 class Administrator {
 private:
 	string ID;
