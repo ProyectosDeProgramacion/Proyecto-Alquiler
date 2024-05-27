@@ -2,6 +2,7 @@
 
 #include "Purchase.hpp"
 
+// Data to be collected
 Purchase::Purchase(string Car, string Model, int Date, int CarID, string CustomerID) :
     Car(Car), Price(Price), Date(Date), CustomerID(CustomerID) {}
 
