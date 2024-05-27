@@ -6,6 +6,7 @@
 #include "Dealership.hpp"
 #include <fstream>
 
+// Class constructor.
 Administrator::Administrator(string ID, int PhoneNumber, string Email, vector<Customer*> CustomerList) :
     ID(ID), phoneNumber(PhoneNumber), Email(Email), CustomerList(CustomerList) {}
 
@@ -50,9 +51,10 @@ void Administrator::logCustomer(Dealership dealership) {
     Customer* customer = new Customer(ID, PhoneNumber, Email, Password, {});
     dealership.addClient(customer);
     CustomerList.push_back(customer);
-    customer->dataSave("Customers.txt");
+    customer->dataSave("Customers.txt"); // Creates a txt file when the costumers are registrated.
 }
 
+// Function identifies whether the user is logged in.
 bool Administrator::Registered(Dealership dealership) {
     int option;
     cout << "\nAlready registered?\nIntroduce 1 for YES or 2 for NO: ";
@@ -71,6 +73,7 @@ bool Administrator::Registered(Dealership dealership) {
     return true;
 }
 
+// Login function.
 bool Administrator::logIn(Dealership dealership, string ID, string Password) {
     for (Customer* i : dealership.getRegisteredCustomers()) {
         if (i->getID() == ID && i->getPassword() == Password) return true;
