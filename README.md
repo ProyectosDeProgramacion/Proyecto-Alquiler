@@ -19,7 +19,7 @@ In this repository we include all the main code separated by each branch which b
 - Prediction ("Prediction.cpp") - Module 1.
 - Report ("Report.cpp") - Module 2.
 
-All cpp files mentioned BEFORE, are on the: 
+All cpp files mentioned before are on the: 
 - Main Branch: 'main'
 
 Furthermore, we have the following branches that correspond to the two modules of the project that have been mentioned throughout the 'Daily Scrums’: More info by going throught the README.md of each branch.
