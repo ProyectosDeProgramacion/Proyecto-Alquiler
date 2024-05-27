@@ -1,8 +1,8 @@
 // (.cpp) COCHE
 
 #include "Car.hpp"
-// #include <string>
 
+// Class constructor.
 Car::Car(string Brand, string Model, float Price, string FuelType, string YearProd, int Kms, int Estatus, int ID) :
     Brand(Brand), Model(Model), Price(Price), FuelType(FuelType), YearProd(YearProd), Kms(Kms), Estatus(Estatus), ID(ID) {}
 
@@ -10,7 +10,7 @@ string Car::getBrand() {
     return this->Brand;
 }
 
-//Comentario2
+// Collect all car data.
 string Car::getModel() {
     return this->Model;
 }
