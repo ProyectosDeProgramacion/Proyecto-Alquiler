@@ -1,9 +1,10 @@
-// (.cpp) PREDICTION
+// (.cpp) PREDICTION: Module 1. by Yago López
 
 #include "Dealership.hpp"
 #include "Car.hpp"
 #include "Prediction.hpp"
 
+// All filtration vectors of every type of the car's attributes are displayed according to the customer's preferences.
 vector<Car*> Prediction::FilterByBrand(const vector<Car*> cars, const string& brand) {
     vector<Car*> filtered;
     for (const auto& car : cars) {
@@ -64,6 +65,7 @@ vector<Car*> Prediction::FilteredByKms(const vector<Car*>& cars, int kms) {
     return filtered;
 }
 
+// The survey is conducted according to the customer's preferences.
 void Prediction::showMenu() {
     cout << "Select an option to filter the cars:\n";
     cout << "1. Make";
@@ -78,12 +80,10 @@ void Prediction::showMenu() {
 
 int Prediction::main() {
 
-    //Concesionario concesionario(coches);
-
     vector<Car*> LeakedCars;
     int options;
     vector<string> SelectedOptions;
-
+    // A switch case is made according to the options you choose.
     while (true) {
         showMenu();
         cin >> options;
@@ -94,11 +94,9 @@ int Prediction::main() {
         case 2:
             SelectedOptions.push_back("model");
             break;
-
         case 3:
             SelectedOptions.push_back("price");
             break;
-
         case 4:
             SelectedOptions.push_back("fuelType");
             break;
@@ -159,7 +157,7 @@ int Prediction::main() {
             cout << "\nQuiting the program without showing results...\n";
             break;
         default:
-            cout << "\nInvalid option.\n";
+            cout << "\nInvalid option.\n"; // An error if the option is not in the menu.
             break;
         }
     }
