@@ -2,7 +2,7 @@
 
 #include "Customer.hpp"
 #include "Exceptions.hpp"
-#include <fstream>
+#include <fstream> // Upload files and generate files.
 
 Customer::Customer(string ID, int PhoneNumber, string Email, string Password, vector<Car*> Cart) :
     ID(ID), PhoneNumber(PhoneNumber), Email(Email), Password(Password), Cart(Cart) {}
@@ -30,7 +30,7 @@ void Customer::showCars() {
         cout << c->getBrand() << endl;
     }
 }
-
+// Generates a list of the car specifications.
 void Customer::generateReport(string filename) {
     ofstream archivo(filename);
     for (Car* c : Cart) {
@@ -39,7 +39,7 @@ void Customer::generateReport(string filename) {
 }
 
 void Customer::dataSave(string filename) {
-    ofstream file(filename, ios::app); // Abre en modo append para agregar datos
+    ofstream file(filename, ios::app); // Opens in append mode to add data
     if (!file.is_open()) {
         throw ExceptionWritingFile();
     }
@@ -48,7 +48,7 @@ void Customer::dataSave(string filename) {
 }
 
 
-void Customer::showCustomers(string filename) { // Excepcion de lectura
+void Customer::showCustomers(string filename) { // Reading exception.
     ifstream file(filename);
     string line;
     if (!file.is_open()) {
